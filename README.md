@@ -19,20 +19,31 @@ Hybrid_channel/        Channel generation and trajectory modules
 Config/                Example, NYC Hybrid, and consistent-RC settings
 docs/                  Flowchart, model notes, and dependency notices
 requirements.txt       Fixed dependency versions
+install.sh             Linux virtual-environment setup
+check_installation.py  Environment and small-example checks
 ```
 
 ## Installation
 
-The tested simulation environment is Ubuntu 24.04, Python 3.12, Sionna RT 1.2.1, and an NVIDIA RTX 5080. Other platforms have not been verified for RT execution.
+The original research environment recorded in the handoff is Ubuntu 24.04, Python 3.12, Sionna RT 1.2.1, and an NVIDIA RTX 5080. A fresh installation of this repository has not yet been validated end to end. Other platforms have not been verified for RT execution.
+
+Install Git, Python 3.12 with `venv` support, and a working NVIDIA driver before starting. Check GPU visibility with `nvidia-smi`. Sionna RT also has an LLVM CPU backend; its use with this project has not been validated. See the [Sionna RT installation guide](https://nvlabs.github.io/sionna/rt/installation.html) for backend prerequisites, using the pinned versions below rather than upgrading to the latest release.
 
 ```bash
 git clone https://github.com/Ollie-92/HybridChannel.git
 cd HybridChannel
-python3.12 -m venv .venv
+bash install.sh
 source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m pip check
+python check_installation.py --run-example
 ```
+
+`install.sh` creates a local `.venv`, installs the versions in `requirements.txt`, and checks dependencies and backend selection. It does not install system packages or GPU drivers. The repository is private, so cloning requires access to it.
+
+The example check runs all three positions, rejects missing steps, invalid array dimensions, non-finite values, negative delays, or empty channels, then generates plots and CSV metrics. Successful execution ends with `Example check passed:` and the output directory. This is an execution check, not a comparison against published numerical results.
+
+For a manual installation, run `python3.12 -m venv .venv`, activate it, and run `python -m pip install -r requirements.txt`. Then run the same example check above.
+
+If installation fails, check the Python version and the first dependency error. If backend initialization fails, check the driver or LLVM setup. If simulation fails, inspect `run.log` in the printed `RUN_DIR`. Each run records its package versions, configuration, code revision, and scene hashes. Keep these records when comparing results; a fixed seed alone does not guarantee identical results on different hardware. A numerical baseline and cross-machine tolerances have not yet been established.
 
 ## Usage
 
