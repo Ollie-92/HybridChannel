@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hybridchannel-research"
+version = "0.1.0"
+description = "Satellite channel simulation with hybrid ray tracing and random clusters"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==1.26.4", "scipy==1.16.1"]
+classifiers = ["Private :: Do Not Upload"]
+
+[project.optional-dependencies]
+rt = ["sionna-rt==1.2.1", "mitsuba==3.7.1", "drjit==1.2.0"]
+analysis = ["matplotlib==3.10.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
