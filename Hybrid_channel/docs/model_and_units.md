@@ -1,6 +1,6 @@
-# Preserved model, units and limitations
+# Channel model and units
 
-The mathematical baseline is the actual YuChein snapshot recorded in provenance.json, not the ideal architecture in the supplied images. No class named `HybridChannel` is required: the primary function is `generate_full_channel`, called by the trajectory CLI.
+The primary channel-generation function is `generate_full_channel`, called by the trajectory CLI. This document describes its calculations and parameter conventions.
 
 ## Data flow and calculations
 

@@ -26,7 +26,7 @@ The root [LICENSE, lines 1–21](https://github.com/ant-uni-bremen/OpenNTN/blob/
 
 | Component/version | Origin and license evidence | Use in this extraction | Rights/conditions and public treatment |
 |---|---|---|---|
-| Team HybridChannel, YuChein snapshot | Per-file SHA-256 and original line ranges in provenance.json; no source LICENSE found | Copied/extracted and minimally modified | Owner confirmed team ownership and permission to publish. Project license choice pending; no blanket open-source qualification claimed. |
+| HybridChannel research source | Per-file SHA-256 and original line ranges in ../docs/provenance.json; no source LICENSE found | Copied/extracted and minimally modified | Owner confirmed team ownership and permission to publish. Project license choice pending; no blanket open-source qualification claimed. |
 | Sionna RT 1.2.1 | [v1.2.1 LICENSE](https://github.com/NVlabs/sionna-rt/blob/v1.2.1/LICENSE), Apache-2.0 notice; README license/citation section | Runtime dependency, no vendored code | Research/modification/redistribution permitted subject to Apache terms. Keep license and source notices; mark modifications if any. No upstream code modifications here. |
 | Mitsuba 3.7.1 | [v3.7.1 LICENSE](https://github.com/mitsuba-renderer/mitsuba3/blob/v3.7.1/LICENSE), BSD-style redistribution conditions | Runtime dependency | Retain copyright/conditions/disclaimer for redistributed source/binaries; no endorsement. Third-party components in wheels retain their own terms. |
 | Dr.Jit 1.2.0 | [v1.2.0 LICENSE](https://github.com/mitsuba-renderer/drjit/blob/v1.2.0/LICENSE), BSD-style conditions | Runtime dependency | Same source/binary notice obligations; inspect packaged third-party notices before bundling binaries. |
@@ -40,7 +40,7 @@ The root [LICENSE, lines 1–21](https://github.com/ant-uni-bremen/OpenNTN/blob/
 | Supplied flowchart images | User attachments; no separate publication license supplied | Read as mapping requirements | Original image files not distributed; fresh textual/Mermaid mapping is included. |
 | Weights, ephemerides, models | No such runtime inputs on selected call path | None | Not included. IONORT and ionosphere research are out of scope. |
 
-The clean-environment dependency inventory and lock record transitive package versions. Dependencies are installed from upstream distributions; their source or binary wheels are **not** bundled in this public candidate. Upstream licenses for direct scientific dependencies are copied under third_party/licenses, and installed-package license metadata is retained for traceability. Absence of a license field is not interpreted as permission. Redistribution of a complete wheelhouse/container would require a separate full binary-notice audit.
+The clean-environment dependency inventory and lock record transitive package versions. Dependencies are installed from upstream distributions; their source or binary wheels are **not** bundled in this public candidate. Upstream licenses for direct scientific dependencies are copied under licenses/, and installed-package license metadata is retained for traceability. Absence of a license field is not interpreted as permission. Redistribution of a complete wheelhouse/container would require a separate full binary-notice audit.
 
 ## Project-license decision
 

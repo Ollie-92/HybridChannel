@@ -13,7 +13,7 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 # Data without confirmed redistribution permission
-data/external/
+**/data/external/
 private_audit/
 private_data/
 private/
