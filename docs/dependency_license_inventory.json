@@ -1,0 +1,567 @@
+[
+  {
+    "name": "asttokens",
+    "version": "3.0.2",
+    "license_expression": null,
+    "license_metadata": "Apache 2.0",
+    "license_classifiers": [],
+    "notice_files": [
+      "asttokens-3.0.2.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "comm",
+    "version": "0.2.3",
+    "license_expression": null,
+    "license_metadata": "BSD 3-Clause License\n\nCopyright (c) 2022, Jupyter\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "comm-0.2.3.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "contourpy",
+    "version": "1.3.3",
+    "license_expression": null,
+    "license_metadata": "BSD 3-Clause License\n\n Copyright (c) 2021-2025, ContourPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are met:\n\n 1. Redistributions of source code must retain the above copyright notice, this\n    list of conditions and the following disclaimer.\n\n 2. Redistributions in bina",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "contourpy-1.3.3.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "cycler",
+    "version": "0.12.1",
+    "license_expression": null,
+    "license_metadata": "Copyright (c) 2015, matplotlib project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyrig",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "cycler-0.12.1.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "drjit",
+    "version": "1.2.0",
+    "license_expression": null,
+    "license_metadata": "",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "drjit-1.2.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "executing",
+    "version": "2.2.1",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "executing-2.2.1.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "fonttools",
+    "version": "4.65.0",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [],
+    "notice_files": [
+      "fonttools-4.65.0.dist-info/licenses/LICENSE",
+      "fonttools-4.65.0.dist-info/licenses/LICENSE.external"
+    ]
+  },
+  {
+    "name": "hybridchannel-research",
+    "version": "0.1.0",
+    "license_expression": null,
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": []
+  },
+  {
+    "name": "importlib_resources",
+    "version": "7.1.0",
+    "license_expression": "Apache-2.0",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "importlib_resources-7.1.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "ipydatawidgets",
+    "version": "4.3.5",
+    "license_expression": null,
+    "license_metadata": "BSD",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "../../../share/jupyter/labextensions/jupyterlab-datawidgets/static/511.22f7942246884696c751.js.LICENSE.txt",
+      "../../../share/jupyter/labextensions/jupyterlab-datawidgets/static/third-party-licenses.json",
+      "ipydatawidgets-4.3.5.dist-info/LICENSE.txt",
+      "ipydatawidgets/nbextension/static/index.js.LICENSE.txt"
+    ]
+  },
+  {
+    "name": "ipython",
+    "version": "9.17.1",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "ipython-9.17.1.dist-info/licenses/COPYING.rst",
+      "ipython-9.17.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "ipython_pygments_lexers",
+    "version": "1.1.1",
+    "license_expression": null,
+    "license_metadata": "",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "ipython_pygments_lexers-1.1.1.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "ipywidgets",
+    "version": "8.1.9",
+    "license_expression": null,
+    "license_metadata": "BSD 3-Clause License",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "ipywidgets-8.1.9.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "jedi",
+    "version": "0.20.0",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "jedi-0.20.0.dist-info/LICENSE.txt",
+      "jedi/third_party/django-stubs/LICENSE.txt",
+      "jedi/third_party/typeshed/LICENSE"
+    ]
+  },
+  {
+    "name": "jupyterlab_widgets",
+    "version": "3.0.17",
+    "license_expression": null,
+    "license_metadata": "Copyright (c) 2015 Project Jupyter Contributors\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the a",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "../../../share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/third-party-licenses.json",
+      "jupyterlab_widgets-3.0.17.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "kiwisolver",
+    "version": "1.5.1",
+    "license_expression": null,
+    "license_metadata": "=========================\n The Kiwi licensing terms\n=========================\nKiwi is licensed under the terms of the Modified BSD License (also known as\nNew or Revised BSD), as follows:\n\nCopyright (c) 2013-2026, Nucleic Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are m",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "kiwisolver-1.5.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.10.5",
+    "license_expression": null,
+    "license_metadata": "License agreement for matplotlib versions 1.3.0 and later\n =========================================================\n\n 1. This LICENSE AGREEMENT is between the Matplotlib Development Team\n (\"MDT\"), and the Individual or Organization (\"Licensee\") accessing and\n otherwise using matplotlib software in source or binary form and its\n associated documentation.\n\n 2. Subject to the terms and conditions of",
+    "license_classifiers": [
+      "License :: OSI Approved :: Python Software Foundation License"
+    ],
+    "notice_files": [
+      "matplotlib-3.10.5.dist-info/LICENSE",
+      "matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU",
+      "matplotlib/mpl-data/fonts/ttf/LICENSE_STIX"
+    ]
+  },
+  {
+    "name": "matplotlib-inline",
+    "version": "0.2.2",
+    "license_expression": "BSD-3-Clause",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "matplotlib_inline-0.2.2.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "mitsuba",
+    "version": "3.7.1",
+    "license_expression": null,
+    "license_metadata": "",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "mitsuba-3.7.1.dist-info/licenses/LICENSE",
+      "mitsuba/data/sunsky/LICENSE"
+    ]
+  },
+  {
+    "name": "numpy",
+    "version": "1.26.4",
+    "license_expression": null,
+    "license_metadata": "Copyright (c) 2005-2023, NumPy Developers.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n    * Redistributions of source code must retain the above copyright\n       notice, this list of conditions and the following disclaimer.\n\n    * Redistributions in binary form must reproduce ",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "numpy-1.26.4.dist-info/LICENSE.txt",
+      "numpy/core/include/numpy/random/LICENSE.txt",
+      "numpy/ma/LICENSE",
+      "numpy/random/LICENSE.md"
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license_expression": "Apache-2.0 OR BSD-2-Clause",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "packaging-26.3.dist-info/licenses/LICENSE",
+      "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+      "packaging/licenses/__init__.py",
+      "packaging/licenses/__pycache__/__init__.cpython-312.pyc",
+      "packaging/licenses/__pycache__/_spdx.cpython-312.pyc",
+      "packaging/licenses/_spdx.py"
+    ]
+  },
+  {
+    "name": "parso",
+    "version": "0.8.7",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "parso-0.8.7.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "pexpect",
+    "version": "4.9.0",
+    "license_expression": null,
+    "license_metadata": "ISC license",
+    "license_classifiers": [
+      "License :: OSI Approved :: ISC License (ISCL)"
+    ],
+    "notice_files": [
+      "pexpect-4.9.0.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "pillow",
+    "version": "12.3.0",
+    "license_expression": "MIT-CMU",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "pillow-12.3.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pip",
+    "version": "24.0",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "pip-24.0.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "prompt_toolkit",
+    "version": "3.0.53",
+    "license_expression": null,
+    "license_metadata": "",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "prompt_toolkit-3.0.53.dist-info/licenses/AUTHORS.rst",
+      "prompt_toolkit-3.0.53.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "psutil",
+    "version": "7.2.2",
+    "license_expression": null,
+    "license_metadata": "BSD-3-Clause",
+    "license_classifiers": [],
+    "notice_files": [
+      "psutil-7.2.2.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "ptyprocess",
+    "version": "0.7.0",
+    "license_expression": null,
+    "license_metadata": "UNKNOWN",
+    "license_classifiers": [
+      "License :: OSI Approved :: ISC License (ISCL)"
+    ],
+    "notice_files": [
+      "ptyprocess-0.7.0.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "pure_eval",
+    "version": "0.2.4",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "pure_eval-0.2.4.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "Pygments",
+    "version": "2.21.0",
+    "license_expression": "BSD-2-Clause",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "pygments-2.21.0.dist-info/licenses/AUTHORS",
+      "pygments-2.21.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "license_expression": "MIT",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "pyparsing-3.3.3.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "python-dateutil",
+    "version": "2.9.0.post0",
+    "license_expression": null,
+    "license_metadata": "Dual License",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License",
+      "License :: OSI Approved :: Apache Software License"
+    ],
+    "notice_files": [
+      "python_dateutil-2.9.0.post0.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "pythreejs",
+    "version": "2.4.2",
+    "license_expression": null,
+    "license_metadata": "BSD-3-Clause",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "../../../share/jupyter/labextensions/jupyter-threejs/static/212.28988830f14c6406a07b.js.LICENSE.txt",
+      "../../../share/jupyter/labextensions/jupyter-threejs/static/270.f09e82a7948794e8fe7c.js.LICENSE.txt",
+      "../../../share/jupyter/labextensions/jupyter-threejs/static/624.12b52bd1c970e314e741.js.LICENSE.txt",
+      "../../../share/jupyter/labextensions/jupyter-threejs/static/861.5d5b0ba33675d668ca0c.js.LICENSE.txt",
+      "../../../share/jupyter/labextensions/jupyter-threejs/static/third-party-licenses.json",
+      "pythreejs-2.4.2.dist-info/LICENSE",
+      "pythreejs/labextension/static/212.28988830f14c6406a07b.js.LICENSE.txt",
+      "pythreejs/labextension/static/270.f09e82a7948794e8fe7c.js.LICENSE.txt",
+      "pythreejs/labextension/static/624.12b52bd1c970e314e741.js.LICENSE.txt",
+      "pythreejs/labextension/static/861.5d5b0ba33675d668ca0c.js.LICENSE.txt",
+      "pythreejs/labextension/static/third-party-licenses.json",
+      "pythreejs/static/index.js.LICENSE.txt"
+    ]
+  },
+  {
+    "name": "scipy",
+    "version": "1.16.1",
+    "license_expression": null,
+    "license_metadata": "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions\n are met:\n\n 1. Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n 2. Redistributions in binary fo",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "scipy-1.16.1.dist-info/LICENSE.txt",
+      "scipy/_lib/_uarray/LICENSE",
+      "scipy/fft/_pocketfft/LICENSE.md",
+      "scipy/sparse/linalg/_eigen/arpack/COPYING"
+    ]
+  },
+  {
+    "name": "setuptools",
+    "version": "80.9.0",
+    "license_expression": "MIT",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "setuptools-80.9.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+      "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+      "setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE",
+      "setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE",
+      "setuptools/_vendor/jaraco.collections-5.1.0.dist-info/LICENSE",
+      "setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE",
+      "setuptools/_vendor/jaraco.functools-4.0.1.dist-info/LICENSE",
+      "setuptools/_vendor/jaraco.text-3.12.1.dist-info/LICENSE",
+      "setuptools/_vendor/more_itertools-10.3.0.dist-info/LICENSE",
+      "setuptools/_vendor/packaging-24.2.dist-info/LICENSE",
+      "setuptools/_vendor/packaging-24.2.dist-info/LICENSE.APACHE",
+      "setuptools/_vendor/packaging-24.2.dist-info/LICENSE.BSD",
+      "setuptools/_vendor/packaging/licenses/__init__.py",
+      "setuptools/_vendor/packaging/licenses/__pycache__/__init__.cpython-312.pyc",
+      "setuptools/_vendor/packaging/licenses/__pycache__/_spdx.cpython-312.pyc",
+      "setuptools/_vendor/packaging/licenses/_spdx.py",
+      "setuptools/_vendor/platformdirs-4.2.2.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE",
+      "setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE",
+      "setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE",
+      "setuptools/_vendor/wheel-0.45.1.dist-info/LICENSE.txt",
+      "setuptools/_vendor/wheel/vendored/packaging/LICENSE",
+      "setuptools/_vendor/wheel/vendored/packaging/LICENSE.APACHE",
+      "setuptools/_vendor/wheel/vendored/packaging/LICENSE.BSD",
+      "setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE",
+      "setuptools/config/NOTICE",
+      "setuptools/config/_validate_pyproject/NOTICE"
+    ]
+  },
+  {
+    "name": "sionna-rt",
+    "version": "1.2.1",
+    "license_expression": null,
+    "license_metadata": "Apache-2.0",
+    "license_classifiers": [],
+    "notice_files": [
+      "sionna_rt-1.2.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "six-1.17.0.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "stack-data",
+    "version": "0.6.3",
+    "license_expression": null,
+    "license_metadata": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "stack_data-0.6.3.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "traitlets",
+    "version": "5.16.1",
+    "license_expression": null,
+    "license_metadata": "BSD 3-Clause License\n\n- Copyright (c) 2001-, IPython Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary fo",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "traitlets-5.16.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "traittypes",
+    "version": "0.2.3",
+    "license_expression": null,
+    "license_metadata": "BSD",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "traittypes-0.2.3.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license_expression": "PSF-2.0",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "wcwidth",
+    "version": "0.8.4",
+    "license_expression": "MIT",
+    "license_metadata": "",
+    "license_classifiers": [],
+    "notice_files": [
+      "wcwidth-0.8.4.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "wheel",
+    "version": "0.45.1",
+    "license_expression": null,
+    "license_metadata": "",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "notice_files": [
+      "wheel-0.45.1.dist-info/LICENSE.txt",
+      "wheel/vendored/packaging/LICENSE",
+      "wheel/vendored/packaging/LICENSE.APACHE",
+      "wheel/vendored/packaging/LICENSE.BSD"
+    ]
+  },
+  {
+    "name": "widgetsnbextension",
+    "version": "4.0.16",
+    "license_expression": null,
+    "license_metadata": "BSD 3-Clause License",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "notice_files": [
+      "../../../share/jupyter/nbextensions/jupyter-js-widgets/extension.js.LICENSE.txt",
+      "widgetsnbextension-4.0.16.dist-info/licenses/LICENSE",
+      "widgetsnbextension/static/extension.js.LICENSE.txt"
+    ]
+  }
+]

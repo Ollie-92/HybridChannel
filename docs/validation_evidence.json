@@ -1,0 +1,694 @@
+{
+  "numeric_parity": {
+    "passed": true,
+    "comparison": "exact equality (rtol=0, atol=0), same clean environment",
+    "synthetic_fixture": true,
+    "does_not_certify_3gpp": true,
+    "counts": {
+      "array_elements": 10514,
+      "scalars": 15390
+    },
+    "cases": [
+      {
+        "kind": "hybrid",
+        "seed": 7,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          7,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 7,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          7,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 7,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          7,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 7,
+        "steps": 3,
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 42,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 42,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          5,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 42,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          5,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 42,
+        "steps": 3,
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 123,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          6,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 123,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          6,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 123,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          6,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 123,
+        "steps": 3,
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 2026,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 2026,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          5,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 2026,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          5,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 2026,
+        "steps": 3,
+        "passed": true
+      }
+    ],
+    "unchanged_retained_function_bodies": [
+      "hybrid_channel.compute_mu_tau_RC",
+      "hybrid_channel.generate_rc_delays",
+      "hybrid_channel.remove_rc_clusters",
+      "hybrid_channel.compute_virtual_powers",
+      "hybrid_channel.normalize_virtual_powers",
+      "hybrid_channel.anchor_rc_power",
+      "hybrid_channel.generate_rc_angles",
+      "hybrid_channel.merge_and_truncate",
+      "hybrid_channel.discretize_pdp",
+      "hybrid_channel.compute_metadata",
+      "hybrid_channel.generate_hybrid_pdp",
+      "hybrid_channel.expand_clusters_to_rays",
+      "hybrid_channel._discretize_pdp_from_rays",
+      "hybrid_channel.generate_xpr",
+      "hybrid_channel.generate_initial_phases",
+      "hybrid_channel.compute_channel_coefficients",
+      "hybrid_channel.generate_full_channel",
+      "consistent_random_clusters._NoRng",
+      "consistent_random_clusters.wrap_pi",
+      "consistent_random_clusters.wrap_zenith",
+      "consistent_random_clusters.angles_to_unit",
+      "consistent_random_clusters.unit_to_angles",
+      "consistent_random_clusters._rt_arrays",
+      "consistent_random_clusters._make_object_copy",
+      "consistent_random_clusters.freeze_random_cluster_state",
+      "consistent_random_clusters.evaluate_random_clusters",
+      "consistent_random_clusters._empty_channel",
+      "consistent_random_clusters.random_cluster_doppler_from_delay",
+      "cluster_splitter.extract_paths_from_rt",
+      "lsp_calculator._lookup_nearest",
+      "lsp_calculator.lookup_C_phi",
+      "lsp_calculator.lookup_C_theta",
+      "lsp_calculator._ntn_dur_los",
+      "lsp_calculator.get_scenario_params",
+      "lsp_calculator.sample_lsps",
+      "lsp_calculator.wrap_pi",
+      "lsp_calculator.circ_rms_spread_deg",
+      "lsp_calculator.lin_rms_spread_deg",
+      "lsp_calculator.rms_delay_spread",
+      "lsp_calculator.has_los"
+    ]
+  },
+  "real_rt_parity": {
+    "passed_same_input_parity": true,
+    "rt_samples_per_source": 3000000,
+    "raw_rt_paths": 2,
+    "filtered_rt_paths": 2,
+    "H_shape": [
+      4,
+      4,
+      5,
+      3
+    ],
+    "same_input_tolerance": {
+      "rtol": 0,
+      "atol": 0
+    },
+    "same_input_counts": {
+      "array_elements": 852,
+      "scalars": 1286
+    },
+    "independent_seeded_rt_rerun": {
+      "same_shape": true,
+      "exactly_equal": true
+    },
+    "scope": "one actual city RT position; all intermediate Hybrid values and three fixed-state RC evaluations compared"
+  },
+  "lsp_sampling": {
+    "experiment_id": "E04-lsp-sampling",
+    "samples": 10000,
+    "seed": 42,
+    "elevation_deg": 40.0,
+    "columns": [
+      "K_R_dB",
+      "DS",
+      "ASD",
+      "ASA",
+      "ZSD",
+      "ZSA"
+    ],
+    "domain": "K in dB; other columns log10",
+    "mean": [
+      10.292089392926924,
+      -8.020915957766416,
+      -2.813579470754491,
+      0.42274010780230775,
+      -2.513906910825384,
+      1.2303237209546825
+    ],
+    "std": [
+      3.3277709168031984,
+      0.7273550040088304,
+      0.33976247294231476,
+      0.7734314138772865,
+      0.5601232037342716,
+      0.03982457242103055
+    ],
+    "covariance": [
+      [
+        11.074059274721186,
+        -0.9394610729146445,
+        -0.20865881118744925,
+        -0.7493951574327037,
+        0.017687463157867123,
+        -0.0012503479545144082
+      ],
+      [
+        -0.9394610729146445,
+        0.5290453018566847,
+        0.12270549790674644,
+        0.44918142790888876,
+        -0.0478314865621205,
+        0.006073316574214268
+      ],
+      [
+        -0.20865881118744925,
+        0.12270549790674644,
+        0.11543853801987672,
+        0.10432013566043868,
+        0.09362515662843768,
+        0.00011279067046325045
+      ],
+      [
+        -0.7493951574327037,
+        0.44918142790888876,
+        0.10432013566043868,
+        0.5981961519722149,
+        -0.00474852740609603,
+        0.003324257610672883
+      ],
+      [
+        0.017687463157867123,
+        -0.0478314865621205,
+        0.09362515662843768,
+        -0.00474852740609603,
+        0.31373800336154556,
+        -0.00012832383247516555
+      ],
+      [
+        -0.0012503479545144082,
+        0.006073316574214268,
+        0.00011279067046325045,
+        0.003324257610672883,
+        -0.00012832383247516555,
+        0.0015859965685179039
+      ]
+    ],
+    "input_correlation_eigenvalues": [
+      0.12998825454319807,
+      0.36486995021238744,
+      0.760080325400388,
+      1.0010061556637302,
+      1.3422812788323435,
+      2.401774035347954
+    ],
+    "note": "Original diagonal stabilization and angle clipping retained; empirical moments are not a conformance pass/fail test."
+  },
+  "runs": [
+    {
+      "run_id": "E01-smoke_20260923T064239Z_54f3272a",
+      "experiment_id": "E01-smoke",
+      "status": "passed",
+      "valid_steps": 3,
+      "git_commit": null,
+      "git_dirty": null,
+      "input_files": 1,
+      "summary": [
+        "valid_steps: 3",
+        "elapsed_s: 0.78",
+        "step 0: t=0.000000s elev=40.000deg H=(2, 2, 5, 3) rays=13 RT/RC=1/4 rawRT=1 keptRT=1 DS=1.607ns K=11.306dB consistentRC=False",
+        "step 1: t=0.100000s elev=40.000deg H=(2, 2, 6, 3) rays=16 RT/RC=1/5 rawRT=1 keptRT=1 DS=22.761ns K=11.106dB consistentRC=False",
+        "step 2: t=0.200000s elev=40.000deg H=(2, 2, 4, 3) rays=10 RT/RC=1/3 rawRT=1 keptRT=1 DS=4.276ns K=15.072dB consistentRC=False"
+      ],
+      "output_sha256": "44faf5dd4d3fa396a32c6a3d8139380b4db7429ff5f8f4bfe11e2fb730eb98af"
+    },
+    {
+      "run_id": "E01-smoke_20260923T070107Z_8ae19bd5",
+      "experiment_id": "E01-smoke",
+      "status": "passed",
+      "valid_steps": 3,
+      "git_commit": null,
+      "git_dirty": true,
+      "input_files": 1,
+      "summary": [
+        "valid_steps: 3",
+        "elapsed_s: 0.79",
+        "step 0: t=0.000000s elev=40.000deg H=(2, 2, 5, 3) rays=13 RT/RC=1/4 rawRT=1 keptRT=1 DS=1.607ns K=11.306dB consistentRC=False",
+        "step 1: t=0.100000s elev=40.000deg H=(2, 2, 6, 3) rays=16 RT/RC=1/5 rawRT=1 keptRT=1 DS=22.761ns K=11.106dB consistentRC=False",
+        "step 2: t=0.200000s elev=40.000deg H=(2, 2, 4, 3) rays=10 RT/RC=1/3 rawRT=1 keptRT=1 DS=4.276ns K=15.072dB consistentRC=False"
+      ],
+      "output_sha256": "54f0a47fac58c5c79051441c8c93b7d2a265ee36107ceccc92aefe61f8097c97"
+    },
+    {
+      "run_id": "E02-nyc-hybrid_20260923T064436Z_a5197821",
+      "experiment_id": "E02-nyc-hybrid",
+      "status": "passed",
+      "valid_steps": 5,
+      "git_commit": null,
+      "git_dirty": true,
+      "input_files": 2906,
+      "summary": [
+        "valid_steps: 5",
+        "elapsed_s: 379.11",
+        "step 0: t=0.000000s elev=40.000deg H=(4, 4, 5, 3) rays=13 RT/RC=2/3 rawRT=2 keptRT=2 DS=1.607ns K=11.306dB consistentRC=False",
+        "step 1: t=0.050000s elev=40.000deg H=(4, 4, 6, 3) rays=16 RT/RC=2/4 rawRT=2 keptRT=2 DS=22.761ns K=11.106dB consistentRC=False",
+        "step 2: t=0.100000s elev=40.000deg H=(4, 4, 5, 3) rays=13 RT/RC=2/3 rawRT=2 keptRT=2 DS=4.276ns K=15.072dB consistentRC=False",
+        "step 3: t=0.150000s elev=40.000deg H=(4, 4, 5, 3) rays=13 RT/RC=2/3 rawRT=2 keptRT=2 DS=5.022ns K=8.789dB consistentRC=False",
+        "step 4: t=0.200000s elev=40.000deg H=(4, 4, 4, 3) rays=10 RT/RC=1/3 rawRT=2 keptRT=1 DS=84.823ns K=8.640dB consistentRC=False"
+      ],
+      "output_sha256": "20a54da36c28cb262d28d03fb71137163cd2ded952a416a8ebb9a81f1d52bda5"
+    },
+    {
+      "run_id": "E03-nyc-consistent-rc_20260923T065100Z_e90bd4b6",
+      "experiment_id": "E03-nyc-consistent-rc",
+      "status": "passed",
+      "valid_steps": 5,
+      "git_commit": null,
+      "git_dirty": true,
+      "input_files": 2906,
+      "summary": [
+        "valid_steps: 5",
+        "elapsed_s: 361.01",
+        "step 0: t=0.000000s elev=40.000deg H=(4, 4, 3, 3) rays=9 RT/RC=0/3 rawRT=2 keptRT=2 DS=1.607ns K=11.306dB consistentRC=True",
+        "step 1: t=0.050000s elev=40.000deg H=(4, 4, 3, 3) rays=9 RT/RC=0/3 rawRT=2 keptRT=2 DS=1.607ns K=11.306dB consistentRC=True",
+        "step 2: t=0.100000s elev=40.000deg H=(4, 4, 3, 3) rays=9 RT/RC=0/3 rawRT=2 keptRT=2 DS=1.607ns K=11.306dB consistentRC=True",
+        "step 3: t=0.150000s elev=40.000deg H=(4, 4, 3, 3) rays=9 RT/RC=0/3 rawRT=2 keptRT=2 DS=1.607ns K=11.306dB consistentRC=True",
+        "step 4: t=0.200000s elev=40.000deg H=(4, 4, 3, 3) rays=9 RT/RC=0/3 rawRT=2 keptRT=1 DS=1.607ns K=11.306dB consistentRC=True"
+      ],
+      "output_sha256": "9daf750f09b248d8a898e2d68f6d5ca5788f1b62701c0d25c428613a86d0aebd"
+    }
+  ],
+  "source_integrity": {
+    "before_utc": "2026-09-23T06:26:29.923154+00:00",
+    "after_utc": "2026-09-23T07:15:32.474860+00:00",
+    "entries_before": 82815,
+    "entries_after": 82815,
+    "regular_files": 80309,
+    "symlinks": 99,
+    "errors": 0,
+    "unstable_during_final_hash": 0,
+    "content_changes": [],
+    "metadata_changes": [],
+    "source_content_unchanged": true,
+    "sources_before.json_sha256": "2dbcb83a7ae3cbaa4b80243ed312051b47bbbda48871975c80585421f450ac6c",
+    "sources_after_delivery.json_sha256": "df86d6d9c2d2e0c917381e00370e16ad5819b9b680c4681c6064230b1e8b2fb3"
+  },
+  "clean_readme_install_exit": 0,
+  "contracts": {
+    "tests": 2,
+    "passed": true,
+    "power_sum_rtol": 2e-07,
+    "power_sum_atol": 0,
+    "accumulation": "float64 from complex64 coefficients"
+  },
+  "trace_checks": [
+    {
+      "file": "E02_file_access.log",
+      "original_file_open_or_mutation_calls": 0,
+      "note": "Guard initialization may stat the original environment directory itself; no original file contents opened."
+    },
+    {
+      "file": "E03_file_access.log",
+      "original_file_open_or_mutation_calls": 0,
+      "note": "Guard initialization may stat the original environment directory itself; no original file contents opened."
+    },
+    {
+      "file": "readme_smoke_access.log",
+      "original_file_open_or_mutation_calls": 0,
+      "note": "Guard initialization may stat the original environment directory itself; no original file contents opened."
+    },
+    {
+      "file": "smoke_file_access.log",
+      "original_file_open_or_mutation_calls": 0,
+      "note": "Guard initialization may stat the original environment directory itself; no original file contents opened."
+    }
+  ],
+  "E02_performance": [
+    "Elapsed (wall clock) time (h:mm:ss or m:ss): 6:23.74",
+    "Maximum resident set size (kbytes): 1540052",
+    "Exit status: 0"
+  ],
+  "E03_performance": [
+    "Elapsed (wall clock) time (h:mm:ss or m:ss): 6:05.56",
+    "Maximum resident set size (kbytes): 1553324",
+    "Exit status: 0"
+  ],
+  "delivery_numeric_parity": {
+    "passed": true,
+    "comparison": "exact equality (rtol=0, atol=0), same clean environment",
+    "synthetic_fixture": true,
+    "does_not_certify_3gpp": true,
+    "counts": {
+      "array_elements": 10514,
+      "scalars": 15390
+    },
+    "cases": [
+      {
+        "kind": "hybrid",
+        "seed": 7,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          7,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 7,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          7,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 7,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          7,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 7,
+        "steps": 3,
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 42,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 42,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          5,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 42,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          5,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 42,
+        "steps": 3,
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 123,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          6,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 123,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          6,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 123,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          6,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 123,
+        "steps": 3,
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 2026,
+        "M": 1,
+        "H_shape": [
+          2,
+          3,
+          5,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 2026,
+        "M": 3,
+        "H_shape": [
+          2,
+          3,
+          5,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "kind": "hybrid",
+        "seed": 2026,
+        "M": 20,
+        "H_shape": [
+          2,
+          3,
+          5,
+          20
+        ],
+        "passed": true
+      },
+      {
+        "kind": "consistent_rc",
+        "seed": 2026,
+        "steps": 3,
+        "passed": true
+      }
+    ],
+    "unchanged_retained_function_bodies": [
+      "hybrid_channel.compute_mu_tau_RC",
+      "hybrid_channel.generate_rc_delays",
+      "hybrid_channel.remove_rc_clusters",
+      "hybrid_channel.compute_virtual_powers",
+      "hybrid_channel.normalize_virtual_powers",
+      "hybrid_channel.anchor_rc_power",
+      "hybrid_channel.generate_rc_angles",
+      "hybrid_channel.merge_and_truncate",
+      "hybrid_channel.discretize_pdp",
+      "hybrid_channel.compute_metadata",
+      "hybrid_channel.generate_hybrid_pdp",
+      "hybrid_channel.expand_clusters_to_rays",
+      "hybrid_channel._discretize_pdp_from_rays",
+      "hybrid_channel.generate_xpr",
+      "hybrid_channel.generate_initial_phases",
+      "hybrid_channel.compute_channel_coefficients",
+      "hybrid_channel.generate_full_channel",
+      "consistent_random_clusters._NoRng",
+      "consistent_random_clusters.wrap_pi",
+      "consistent_random_clusters.wrap_zenith",
+      "consistent_random_clusters.angles_to_unit",
+      "consistent_random_clusters.unit_to_angles",
+      "consistent_random_clusters._rt_arrays",
+      "consistent_random_clusters._make_object_copy",
+      "consistent_random_clusters.freeze_random_cluster_state",
+      "consistent_random_clusters.evaluate_random_clusters",
+      "consistent_random_clusters._empty_channel",
+      "consistent_random_clusters.random_cluster_doppler_from_delay",
+      "cluster_splitter.extract_paths_from_rt",
+      "lsp_calculator._lookup_nearest",
+      "lsp_calculator.lookup_C_phi",
+      "lsp_calculator.lookup_C_theta",
+      "lsp_calculator._ntn_dur_los",
+      "lsp_calculator.get_scenario_params",
+      "lsp_calculator.sample_lsps",
+      "lsp_calculator.wrap_pi",
+      "lsp_calculator.circ_rms_spread_deg",
+      "lsp_calculator.lin_rms_spread_deg",
+      "lsp_calculator.rms_delay_spread",
+      "lsp_calculator.has_los"
+    ]
+  },
+  "delivery_scan": {
+    "candidate_files": 46,
+    "findings": []
+  }
+}

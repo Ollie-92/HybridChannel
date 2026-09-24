@@ -1,0 +1,147 @@
+{
+  "source_version": "YuChein snapshot 2026-09-23",
+  "files": [
+    {
+      "source": "YuChein/hybrid_channel.py",
+      "source_sha256": "7ee79b165ae6e6fc209e282bc02335c4acfe9a7020ce67adf13082239d606f53",
+      "source_lines": 1171,
+      "extracted_ranges": [
+        [
+          1,
+          1121
+        ]
+      ],
+      "destination": "src/hybridchannel/hybrid_channel.py",
+      "destination_sha256": "d7ac97aab0bf15147aac01c150b4760dd9e3130b03e7c4a310631fbac79b8100",
+      "changes": "English documentation; package-relative imports; selected dependency closure. Trajectory paths resolve from cwd and scene is explicit. No equation, numeric parameter, or RNG change."
+    },
+    {
+      "source": "YuChein/consistent_random_clusters.py",
+      "source_sha256": "1dabf000c199c792353964a199d4751f979c71e94e8f868b13f665ceee8017e4",
+      "source_lines": 448,
+      "extracted_ranges": [
+        [
+          1,
+          448
+        ]
+      ],
+      "destination": "src/hybridchannel/consistent_random_clusters.py",
+      "destination_sha256": "07eed756ddc29b7fcc8462bbbdb0c5789d2511474974a32a268a46ddaf44691d",
+      "changes": "English documentation; package-relative imports; selected dependency closure. Trajectory paths resolve from cwd and scene is explicit. No equation, numeric parameter, or RNG change."
+    },
+    {
+      "source": "YuChein/cluster_splitter.py",
+      "source_sha256": "3e189500c79c514850c619843fa6f5a068c7f83e0e69a2742939345ecaa30e25",
+      "source_lines": 323,
+      "extracted_ranges": [
+        [
+          8,
+          8
+        ],
+        [
+          37,
+          92
+        ]
+      ],
+      "destination": "src/hybridchannel/cluster_splitter.py",
+      "destination_sha256": "851a2e9ec3b9dee88d9449cc71607b0d53a00a68a22d3c3695b0b7d3f480cdd5",
+      "changes": "English documentation; package-relative imports; selected dependency closure. Trajectory paths resolve from cwd and scene is explicit. No equation, numeric parameter, or RNG change."
+    },
+    {
+      "source": "YuChein/lsp_calculator.py",
+      "source_sha256": "912497266b6460f51fd226abcfcec4fe4b8e2d9f1fc10f6b37d557da144b0103",
+      "source_lines": 658,
+      "extracted_ranges": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          24,
+          28
+        ],
+        [
+          31,
+          54
+        ],
+        [
+          57,
+          79
+        ],
+        [
+          86,
+          102
+        ],
+        [
+          323,
+          358
+        ],
+        [
+          362,
+          370
+        ],
+        [
+          373,
+          404
+        ],
+        [
+          411,
+          516
+        ],
+        [
+          518,
+          519
+        ],
+        [
+          521,
+          524
+        ],
+        [
+          526,
+          528
+        ],
+        [
+          530,
+          533
+        ],
+        [
+          541,
+          546
+        ]
+      ],
+      "destination": "src/hybridchannel/lsp_calculator.py",
+      "destination_sha256": "2ff40a5937699a33f25f2a2052f4c1fe4fdc5acc2de70d5d80f0fb43b06167d6",
+      "changes": "English documentation; package-relative imports; selected dependency closure. Trajectory paths resolve from cwd and scene is explicit. No equation, numeric parameter, or RNG change."
+    },
+    {
+      "source": "YuChein/run_satellite_trajectory_channel.py",
+      "source_sha256": "81daa8a46a2aefd71d5d83dd6abe42ef0413d6f65e00ae109d9eb488f6a233a8",
+      "source_lines": 466,
+      "extracted_ranges": [
+        [
+          1,
+          466
+        ]
+      ],
+      "destination": "src/hybridchannel/trajectory.py",
+      "destination_sha256": "de8153341ccfaad88692548741cefadbff3c013809e1c4397070a3b702e9cd31",
+      "changes": "English documentation; package-relative imports; selected dependency closure. Trajectory paths resolve from cwd and scene is explicit. No equation, numeric parameter, or RNG change."
+    }
+  ]
+}

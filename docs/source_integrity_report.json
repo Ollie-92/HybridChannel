@@ -1,0 +1,15 @@
+{
+  "before_utc": "2026-09-23T06:26:29.923154+00:00",
+  "after_utc": "2026-09-23T07:15:32.474860+00:00",
+  "entries_before": 82815,
+  "entries_after": 82815,
+  "regular_files": 80309,
+  "symlinks": 99,
+  "errors": 0,
+  "unstable_during_final_hash": 0,
+  "content_changes": [],
+  "metadata_changes": [],
+  "source_content_unchanged": true,
+  "sources_before.json_sha256": "2dbcb83a7ae3cbaa4b80243ed312051b47bbbda48871975c80585421f450ac6c",
+  "sources_after_delivery.json_sha256": "df86d6d9c2d2e0c917381e00370e16ad5819b9b680c4681c6064230b1e8b2fb3"
+}
