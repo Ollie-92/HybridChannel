@@ -4,4 +4,6 @@ The simulator depends on Sionna RT 1.2.1, Mitsuba 3.7.1, Dr.Jit 1.2.0, NumPy 1.2
 
 OpenNTN is an independent research reference, not an imported dependency or vendored implementation. Its notice is retained with the Apache-2.0 text used by its inspected third-party files.
 
+OpenNTN requests citation of its WSA 2025 paper when used in research. The [project README](../../README.md#openntn) includes the requested reference and BibTeX from the [upstream citation instructions](https://github.com/ant-uni-bremen/OpenNTN#citing-openntn).
+
 No third-party source code, binary distributions, or city scene assets are bundled. These notices do not license the project's own code. Detailed source and license review records are preserved on the [archive/research-validation branch](https://github.com/Ollie-92/HybridChannel/tree/archive/research-validation).

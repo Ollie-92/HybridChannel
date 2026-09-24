@@ -91,4 +91,27 @@ Original numerical comparisons and development tests are preserved on the [archi
 - 3GPP TR 38.901 V19.1.0, *Study on channel model for frequencies from 0.5 to 100 GHz*, Release 19, October 2025. [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf).
 - Ray tracing uses Sionna RT. See [dependency notices](docs/third_party/README.md).
 
+### OpenNTN
+
+[OpenNTN](https://github.com/ant-uni-bremen/OpenNTN) is an independent NTN channel-model reference used by a separate reference script in the original research project. The simulation code in this repository does not import OpenNTN. Following its [citation instructions](https://github.com/ant-uni-bremen/OpenNTN#citing-openntn), we acknowledge:
+
+T. Düe, M. Vakilifard, C. Bockelmann, D. Wübben, and A. Dekorsy, “OpenNTN: An Open-Source Framework for Non-Terrestrial Network Channel Simulations,” *International Workshop on Smart Antennas (WSA)*, Erlangen, Germany, September 16–18, 2025. [Paper](https://www.ant.uni-bremen.de/sixcms/media.php/102/15183/OpenNTN_An_OpenSource_Framework_For_NTN_Simulations.pdf).
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@inproceedings{OpenNTNPaper,
+  author    = {T. D{\"u}e and M. Vakilifard and C. Bockelmann and D. W{\"u}bben and A. Dekorsy},
+  title     = {{OpenNTN}: An Open-Source Framework for Non-Terrestrial Network Channel Simulations},
+  booktitle = {International Workshop on Smart Antennas (WSA)},
+  address   = {Erlangen, Germany},
+  year      = {2025},
+  month     = sep,
+  url       = {https://www.ant.uni-bremen.de/sixcms/media.php/102/15183/OpenNTN_An_OpenSource_Framework_For_NTN_Simulations.pdf}
+}
+```
+
+</details>
+
 A project license has not yet been selected. Third-party components retain their respective licenses. Research publication and citation information will be added when available.
