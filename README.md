@@ -1,42 +1,94 @@
 # Hybrid RT–RC Satellite Channel Simulator
 
-This repository implements a satellite-to-ground channel model combining Sionna ray tracing (RT) with statistical random clusters (RC).
+This repository implements a satellite-to-ground channel model combining Sionna ray tracing (RT) with statistical random clusters (RC). The hybrid channel generation methodology is based on the map-based hybrid model in **3GPP TR 38.901 (v19), Clause 8**.
 
-The hybrid channel generation methodology is based on the map-based hybrid model in **3GPP TR 38.901 (v19), Clause 8**. Satellite-specific parameters and implementation assumptions are described in the [model notes](Hybrid_channel/docs/model_and_units.md).
-
-RT paths describe the scene-specific propagation environment. Random clusters supplement these paths through delay generation, duplicate-cluster removal, and power anchoring. The combined rays are used to generate a complex MIMO channel impulse response along a configurable satellite trajectory.
+RT paths describe the scene-specific propagation environment. Random clusters supplement these paths through delay generation, duplicate-cluster removal, and power anchoring. The combined rays form a complex MIMO channel impulse response along a configurable straight satellite trajectory.
 
 ## Channel Generation Procedure
 
-![Map-based hybrid channel generation procedure](Hybrid_channel/docs/figures/hybrid_channel_flowchart.png)
+![Map-based hybrid channel generation procedure](docs/channel_flowchart.png)
 
-Source: **3GPP TR 38.901 V19.1.0 (Release 19), Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI reference](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151). The figure shows the reference procedure; see the [implemented flow](Hybrid_channel/docs/flowcharts.md) for this simulator.
+Source: **3GPP TR 38.901 V19.1.0 (Release 19), Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI reference](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151). The figure shows the reference methodology; [model notes](docs/model.md) describe this implementation.
 
-## Project Structure
+## Files
 
-All simulation code, experiment settings, and installation files are in [`Hybrid_channel/`](Hybrid_channel/).
+```text
+run_simulation.py       Run a simulation from a configuration file
+plot_results.py         Plot PDP/CFR and export CSV metrics
+Hybrid_channel/        Channel generation and trajectory modules
+Config/                Example, NYC Hybrid, and consistent-RC settings
+docs/                  Flowchart, model notes, and dependency notices
+requirements.txt       Fixed dependency versions
+```
+
+## Installation
+
+The tested simulation environment is Ubuntu 24.04, Python 3.12, Sionna RT 1.2.1, and an NVIDIA RTX 5080. Other platforms have not been verified for RT execution.
+
+```bash
+git clone https://github.com/Ollie-92/HybridChannel.git
+cd HybridChannel
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip check
+```
 
 ## Usage
 
-The simulator provides two experiments:
+Run commands from the repository root.
 
-- **Hybrid RT + RC:** generate a combined channel at each satellite position.
-- **Consistent RC:** retain fixed random scatterers and evaluate an RC-only channel along the trajectory.
+### Basic example
 
-The current trajectory is a configurable straight line. See [`Hybrid_channel/README.md`](Hybrid_channel/README.md) for installation, scene input, and execution commands.
+```bash
+python run_simulation.py --config Config/example.json
+```
 
-## Simulation Outputs
+This example generates a small ground-plane scene and evaluates three satellite positions. No external scene is required.
 
-The simulator saves channel coefficients, delays, and satellite positions. The analysis script generates PDP/CFR plots and CSV metrics. Results are stored under `Hybrid_channel/runs/`.
+### NYC scene
 
-City scene XML and mesh files must be supplied separately. A small ground-plane example is included for checking the simulation workflow.
+Place the scene XML and referenced meshes in the following local directory, preserving their relative paths:
 
-## References
+```text
+Scene/NYC_scene/
+    NYC_sionna.xml
+    meshes/
+```
+
+Scene assets are supplied separately and excluded from Git.
+
+```bash
+# Hybrid RT + RC
+python run_simulation.py --config Config/nyc_hybrid.json
+
+# Fixed-scatterer RC-only
+python run_simulation.py --config Config/nyc_consistent_rc.json
+```
+
+Edit the `cli` fields in `Config/` to change carrier frequency, antenna count, receiver coordinates, trajectory, seed, or RT settings. The NYC configurations use 28 GHz, 600 km scene altitude, and five positions over 0.2 seconds.
+
+For another scene, add `--scene /absolute/path/to/scene.xml` and adjust receiver coordinates and trajectory settings for that scene.
+
+### Results
+
+Each simulation prints a new directory under `Result/`, containing channel coefficients, delays, satellite positions, configuration, and logs. Use that directory to generate PDP/CFR plots and CSV metrics:
+
+```bash
+python plot_results.py Result/<run-directory> --trusted-local-output
+```
+
+Only analyze trusted simulation files. Analysis reads NumPy object arrays and saves its outputs under the run's `analysis/` directory.
+
+## Model Notes
+
+The consistent-RC option retains fixed scatterers and outputs an RC-only channel. Full Hybrid temporal consistency and TLE propagation are not implemented. Hybrid delays are excess delays; consistent-RC delays are absolute delays. Equations, units, and the retained NTN parameter approximations are documented in [docs/model.md](docs/model.md).
+
+Original numerical comparisons and development tests are preserved on the [archive/research-validation branch](https://github.com/Ollie-92/HybridChannel/tree/archive/research-validation). Its instructions apply to that branch's layout. Independent 3GPP/OpenNTN conformance has not been established.
+
+## References and Usage
 
 - 3GPP TR 38.901 V19.1.0, *Study on channel model for frequencies from 0.5 to 100 GHz*, Release 19, October 2025. [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf).
+- Ray tracing uses Sionna RT. See [dependency notices](docs/third_party/README.md).
 
-Ray tracing uses Sionna RT. Dependency notices are provided in [`Hybrid_channel/third_party/`](Hybrid_channel/third_party/). Publication and citation information will be added when available.
-
-## Usage Notice
-
-A project license has not yet been selected. Third-party components retain their respective licenses.
+A project license has not yet been selected. Third-party components retain their respective licenses. Research publication and citation information will be added when available.

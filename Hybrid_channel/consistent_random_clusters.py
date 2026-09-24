@@ -1,7 +1,4 @@
-# Source: YuChein/consistent_random_clusters.py; SHA-256 in docs/provenance.json.
-# Modified for this local review on 2026-09-23: packaging and documentation.
-# Original code rights: research team (confirmed by project owner); LICENSE pending.
-# B17: freeze RC state at t0 and evaluate fixed scatterers. Positions: m; time: s. Output is RC-only with absolute delays; deterministic RT tracking is not implemented.
+# Source history and numerical checks: archive/research-validation branch.
 
 """
 Temporal/spatial consistency extension for the stochastic random-cluster part

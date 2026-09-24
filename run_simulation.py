@@ -1,8 +1,4 @@
-"""Run the preserved trajectory CLI with a configuration and unique output dir.
-
-Integration code added during extraction (B01/B21); not a new channel model.
-All scientific defaults below come from the original CLI or an explicit JSON.
-"""
+"""Run a satellite channel simulation using a JSON configuration."""
 from __future__ import annotations
 
 import argparse
@@ -18,7 +14,7 @@ import sys
 import uuid
 import xml.etree.ElementTree as ET
 
-REPO = Path(__file__).resolve().parents[1]
+REPO = Path(__file__).resolve().parent
 
 
 def sha256(path):
@@ -63,7 +59,7 @@ def make_test_scene(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', required=True, type=Path)
-    parser.add_argument('--output-root', type=Path, default=REPO / 'runs')
+    parser.add_argument('--output-root', type=Path, default=REPO / 'Result')
     parser.add_argument('--scene', type=Path, help='Privately supplied scene, overriding config')
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
@@ -86,7 +82,7 @@ def main():
         scene = Path(scene_value)
         scene = (scene if scene.is_absolute() else REPO / scene).resolve()
         if not scene.is_file():
-            raise FileNotFoundError('Provide a licensed scene with --scene; see data/README.md')
+            raise FileNotFoundError('Supply the scene XML with --scene; see README.md')
     record_scene(scene, run)
     cli = config['cli']
     permitted = {'rx-x','rx-y','rx-z','fc-ghz','tx-power-dbm','altitude-m','initial-elev-deg',
@@ -94,7 +90,7 @@ def main():
                  'max-num-paths','rt-pre-filter-db','num-ant','seed','consistent-random-clusters'}
     if set(cli) - permitted:
         raise ValueError('Unsupported scientific option: ' + str(set(cli) - permitted))
-    command = [sys.executable, '-m', 'hybridchannel.trajectory', '--scene', str(scene),
+    command = [sys.executable, '-m', 'Hybrid_channel.trajectory', '--scene', str(scene),
                '--output', str(run / 'channel.npz'), '--summary', str(run / 'summary.txt')]
     for name, value in cli.items():
         if isinstance(value, bool):
@@ -102,6 +98,8 @@ def main():
         else:
             command.extend(['--' + name, str(value)])
     env = os.environ.copy()
+    # Resolve the local channel package while the solver runs in its output directory.
+    env['PYTHONPATH'] = str(REPO)
     # The original package/global environment never supplies an implicit cache.
     for key, sub in {'XDG_CACHE_HOME':'cache','MPLCONFIGDIR':'cache/matplotlib',
                      'TMPDIR':'tmp', 'HOME':'home'}.items():
@@ -119,7 +117,7 @@ def main():
                 'git_commit':git.stdout.strip() if git.returncode == 0 else None,
                 'git_dirty':bool(status.stdout.strip()) if status.returncode == 0 else None,
                 'packages':{d.metadata['Name']:d.version for d in importlib.metadata.distributions()},
-                'package_sha256':{p.name:sha256(p) for p in (REPO/'src/hybridchannel').glob('*.py')},
+                'package_sha256':{p.name:sha256(p) for p in (REPO/'Hybrid_channel').glob('*.py')},
                 'status':'running'}
     metadata_path = run / 'environment.json'
     metadata_path.write_text(json.dumps(metadata, indent=2) + '\n')

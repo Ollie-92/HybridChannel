@@ -1,7 +1,4 @@
-# Source: YuChein/hybrid_channel.py; SHA-256 in docs/provenance.json.
-# Modified for this local review on 2026-09-23: packaging and documentation.
-# Original code rights: research team (confirmed by project owner); LICENSE pending.
-# B11-B16, B18: scalar RT/RC fusion. Delays: s; angles: rad (LSP spreads: deg); powers: linear channel gain. Preserves the YuChein theta-only assembly and RNG ordering.
+# Source history and numerical checks: archive/research-validation branch.
 
 """
 Map-based Hybrid Channel Model: PDP fusion

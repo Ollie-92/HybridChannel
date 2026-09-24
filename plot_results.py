@@ -1,17 +1,8 @@
-"""Analyze a locally generated trajectory NPZ (B19/B21).
-
-This is new export/plotting infrastructure. CFR is the explicit Fourier sum of
-the retained CIR, not a previously implemented YuChein output. Input object
-arrays require pickle, so only trusted files produced by this project are used.
-"""
+"""Plot PDP/CFR and export metrics from trusted simulation outputs."""
 import argparse
 import csv
 import json
 from pathlib import Path
-import numpy as np
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 
 def main():
@@ -19,6 +10,11 @@ def main():
     p.add_argument('run',type=Path)
     p.add_argument('--trusted-local-output',action='store_true',required=True)
     args=p.parse_args()
+    import numpy as np
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+
     out=args.run/'analysis'
     out.mkdir(exist_ok=False)
     with np.load(args.run/'channel.npz',allow_pickle=True) as data:

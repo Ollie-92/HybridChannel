@@ -1,7 +1,4 @@
-# Source: YuChein/run_satellite_trajectory_channel.py; SHA-256 in docs/provenance.json.
-# Modified for this local review on 2026-09-23: packaging and documentation.
-# Original code rights: research team (confirmed by project owner); LICENSE pending.
-# B01-B09, B17-B18, B21: original straight-line trajectory driver. No TLE or general channel-mode dispatcher. Use the experiment wrapper for isolated output and metadata.
+# Source history and numerical checks: archive/research-validation branch.
 
 """
 Generate hybrid channel responses along a simple satellite trajectory.

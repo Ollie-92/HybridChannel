@@ -1,7 +1,4 @@
-# Source: YuChein/lsp_calculator.py; SHA-256 in docs/provenance.json.
-# Modified for this local review on 2026-09-23: packaging and documentation.
-# Original code rights: research team (confirmed by project owner); LICENSE pending.
-# B10-B11, B19: legacy Dense Urban LOS tables, sampling, and statistics. Only the NTN registry is retained. Parameters are not certified as exact TR 38.811 conformance.
+# Source history and numerical checks: archive/research-validation branch.
 
 import numpy as np
 

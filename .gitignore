@@ -5,6 +5,8 @@ venv/
 .local-home/
 tmp/
 runs/
+/Result/
+/Scene/
 build/
 dist/
 *.egg-info/

@@ -1,7 +1,4 @@
-# Source: YuChein/cluster_splitter.py; SHA-256 in docs/provenance.json.
-# Modified for this local review on 2026-09-23: packaging and documentation.
-# Original code rights: research team (confirmed by project owner); LICENSE pending.
-# B08: extract Sionna RT scalar VV paths. CIR coefficients become squared magnitudes, so native complex RT phase is not preserved by the hybrid input interface.
+# Source history and numerical checks: archive/research-validation branch.
 
 import numpy as np
 

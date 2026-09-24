@@ -1,6 +1,6 @@
 {
-  "experiment_id": "E01-smoke",
-  "description": "New small integration test; not a paper experiment",
+  "experiment_id": "example",
+  "description": "Small ground-plane example",
   "scene": "generated-test-ground",
   "cli": {
     "rx-x": 0.0,
@@ -21,25 +21,5 @@
     "num-ant": 2,
     "seed": 42,
     "consistent-random-clusters": false
-  },
-  "blocks": [
-    "B01",
-    "B02",
-    "B03",
-    "B05",
-    "B06",
-    "B07",
-    "B08",
-    "B09",
-    "B10",
-    "B11",
-    "B12",
-    "B13",
-    "B14",
-    "B15",
-    "B16",
-    "B18",
-    "B21"
-  ],
-  "paper_figure": "TBD"
+  }
 }
