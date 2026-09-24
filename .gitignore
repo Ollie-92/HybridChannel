@@ -6,7 +6,8 @@ venv/
 tmp/
 runs/
 /Result/
-/Scene/
+/Scene/*
+!/Scene/NYC_scene/
 build/
 dist/
 *.egg-info/
@@ -38,3 +39,7 @@ id_ed25519*
 *.npz
 *.npy
 *.log
+
+# NYC scene included in the private research repository
+!/Scene/NYC_scene/NYC_sionna.xml
+!/Scene/NYC_scene/meshes/*.ply

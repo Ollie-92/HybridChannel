@@ -6,4 +6,4 @@ OpenNTN is an independent research reference, not an imported dependency or vend
 
 OpenNTN requests citation of its WSA 2025 paper when used in research. The [project README](../../README.md#openntn) includes the requested reference and BibTeX from the [upstream citation instructions](https://github.com/ant-uni-bremen/OpenNTN#citing-openntn).
 
-No third-party source code, binary distributions, or city scene assets are bundled. These notices do not license the project's own code. Detailed source and license review records are preserved on the [archive/research-validation branch](https://github.com/Ollie-92/HybridChannel/tree/archive/research-validation).
+No third-party library source code or binary distributions are bundled. NYC scene assets are included for private collaboration; these dependency notices do not grant rights to the scene or license the project's own code. Detailed source and license review records are preserved on the [archive/research-validation branch](https://github.com/Ollie-92/HybridChannel/tree/archive/research-validation).

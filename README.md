@@ -48,7 +48,7 @@ This example generates a small ground-plane scene and evaluates three satellite 
 
 ### NYC scene
 
-Place the scene XML and referenced meshes in the following local directory, preserving their relative paths:
+The NYC scene XML and its referenced meshes are included in this private repository:
 
 ```text
 Scene/NYC_scene/
@@ -56,7 +56,7 @@ Scene/NYC_scene/
     meshes/
 ```
 
-Scene assets are supplied separately and excluded from Git.
+The scene contains one XML file and 2,905 mesh files (about 94 MB in total). Blender project files and other scenes are not included. Public redistribution permission for these assets has not been established.
 
 ```bash
 # Hybrid RT + RC
