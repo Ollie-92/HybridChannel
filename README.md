@@ -4,7 +4,7 @@ Hybrid RT–RC satellite channel simulator based on the map-based hybrid model i
 
 Sionna RT computes propagation paths in a 3D scene. Statistical random clusters supplement those paths through delay generation, duplicate-cluster removal, and power anchoring. The simulator produces complex MIMO channel impulse responses along a configurable straight satellite trajectory.
 
-[Quick start](#quick-start) · [Experiments](#experiments) · [User guide](docs/usage.md) · [Model details](docs/model.md)
+[Quick start](#quick-start) · [Experiments](#experiments) · [Model details](docs/model.md)
 
 ## Channel Generation
 
@@ -26,7 +26,9 @@ source .venv/bin/activate
 python check_installation.py --run-example
 ```
 
-The check runs a three-position ground-plane example and generates channel data, plots, and CSV metrics. On success it prints `Example check passed:` followed by the output directory. Fresh-environment RT execution and numerical reproduction have not yet been validated. See the [installation and troubleshooting guide](docs/usage.md#installation).
+`install.sh` creates `.venv` and installs the pinned dependencies. The check runs a three-position ground-plane example and generates channel data, plots, and CSV metrics. On success it prints `Example check passed:` followed by the output directory. Fresh-environment RT execution and numerical reproduction have not yet been validated.
+
+If installation fails, check that Python 3.12 is available. For GPU/backend errors, check `nvidia-smi` and the [Sionna RT prerequisites](https://nvlabs.github.io/sionna/rt/installation.html). For simulation errors, read `run.log` in the printed `RUN_DIR`.
 
 ## Experiments
 
@@ -40,12 +42,19 @@ Run commands from the repository root. Each JSON file contains the scene path an
 
 ```bash
 python run_simulation.py --config Config/nyc_hybrid.json
+
+# Fixed-scatterer RC-only
+python run_simulation.py --config Config/nyc_consistent_rc.json
+
+# Plot one completed run
 python plot_results.py Result/<run-directory> --trusted-local-output
 ```
 
 Replace `<run-directory>` with the directory printed by the simulation. The NYC settings use 28 GHz and a 600 km scene altitude. The scene XML and referenced meshes are included in [Scene/NYC_scene](Scene/NYC_scene).
 
-Each run saves CIR coefficients, delays, geometry, and execution records under `Result/`. Analysis adds PDP/CFR plots and CSV metrics. See the [user guide](docs/usage.md#usage) for the RC-only command, custom scenes, and output details.
+Edit the `cli` fields in a configuration to change frequency, antennas, receiver coordinates, trajectory, seed, or RT settings. For another scene, add `--scene /absolute/path/to/scene.xml` to the simulation command and adjust its geometry settings.
+
+Each run saves CIR coefficients, delays, geometry, configuration, package versions, and logs under `Result/`. Analysis adds PDP/CFR plots and CSV metrics in `analysis/`. Only analyze trusted files: the saved channel uses NumPy object arrays.
 
 ## Repository Structure
 
@@ -54,7 +63,7 @@ Each run saves CIR coefficients, delays, geometry, and execution records under `
 | [Hybrid_channel/](Hybrid_channel) | RT path extraction, random clusters, channel assembly, and trajectory simulation |
 | [Config/](Config) | Experiment settings |
 | [Scene/](Scene) | NYC scene XML and meshes |
-| [docs/](docs) | User guide, model equations, flowchart, and dependency notices |
+| [docs/](docs) | Model equations, flowchart, and dependency notices |
 | [run_simulation.py](run_simulation.py) | Simulation entry point |
 | [plot_results.py](plot_results.py) | PDP/CFR plots and CSV export |
 | [install.sh](install.sh), [requirements.txt](requirements.txt) | Environment setup and pinned dependencies |

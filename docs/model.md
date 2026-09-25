@@ -50,6 +50,8 @@ This is deterministic evaluation of a fixed RC realization. It does not supply s
 
 ## Known issues preserved
 
+Development tests and original numerical comparisons are preserved on the [archive/research-validation branch](https://github.com/Ollie-92/HybridChannel/tree/archive/research-validation), with instructions for that branch's layout. Independent 3GPP/OpenNTN conformance, a numerical reference baseline for this layout, and cross-machine tolerances have not been established. A fixed seed alone does not guarantee identical output across hardware.
+
 - No general channel-mode selector, orbit/TLE manager, per-step independent OpenNTN validation or full Hybrid spatial-consistency manager exists in the selected path.
 - Approximate NTN correlation and XPR parameters, band-independent legacy tables and covariance diagonal adjustment can alter the intended target moments. Nearest-elevation lookup is discontinuous.
 - The local delay polynomial convention differs from the separately audited OpenNTN implementation (multiplication versus division). This is a research-review issue, not a silent portability fix.
