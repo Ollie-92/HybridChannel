@@ -2,6 +2,19 @@
 
 The primary channel-generation function is `generate_full_channel`, called by the trajectory CLI. This document describes its calculations and parameter conventions.
 
+## Code guide
+
+| Module | Role |
+|---|---|
+| [trajectory.py](../Hybrid_channel/trajectory.py) | Load the scene, step through satellite positions, run RT, and save channels |
+| [cluster_splitter.py](../Hybrid_channel/cluster_splitter.py) | Extract RT path delays, powers, angles, and LOS labels |
+| [lsp_calculator.py](../Hybrid_channel/lsp_calculator.py) | Sample correlated large-scale parameters from the local NTN table |
+| [hybrid_channel.py](../Hybrid_channel/hybrid_channel.py) | Generate RC clusters, anchor them to RT, and assemble complex channel coefficients |
+| [consistent_random_clusters.py](../Hybrid_channel/consistent_random_clusters.py) | Retain fixed RC scatterers and update their channels along the trajectory |
+| [__init__.py](../Hybrid_channel/__init__.py) | Expose the package entry point |
+
+Start with `run_simulation.py` for configuration handling, then `trajectory.py` for the simulation loop and `hybrid_channel.py` for channel generation.
+
 ## Data flow and calculations
 
 1. `trajectory.build_scene` loads a Sionna XML, uses scalar vertical isotropic TX/RX probes and sets each supported material's scattering coefficient to 0.25 and pattern to Lambertian. The original NYC XML maps its materials to concrete. No material optimization was introduced.
