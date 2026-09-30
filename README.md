@@ -63,7 +63,7 @@ Each run saves CIR coefficients, delays, geometry, configuration, package versio
 | [Hybrid_channel/](Hybrid_channel) | RT path extraction, random clusters, channel assembly, and trajectory simulation |
 | [Config/](Config) | Experiment settings |
 | [Scene/](Scene) | NYC scene XML and meshes |
-| [docs/](docs) | Model equations, flowchart, and dependency notices |
+| [docs/](docs) | Model equations and flowchart |
 | [run_simulation.py](run_simulation.py) | Simulation entry point |
 | [tools/](tools) | Installation, environment checks, and result plotting |
 | [requirements.txt](requirements.txt) | Pinned dependencies |
@@ -95,8 +95,6 @@ T. Düe, M. Vakilifard, C. Bockelmann, D. Wübben, and A. Dekorsy, “OpenNTN: A
 ```
 
 </details>
-
-Third-party licenses and notices are listed in [docs/third_party](docs/third_party/README.md).
 
 ## Usage Notice
 
