@@ -21,12 +21,12 @@ The recorded research environment uses **Ubuntu 24.04, Python 3.12, Sionna RT 1.
 ```bash
 git clone https://github.com/Ollie-92/HybridChannel.git
 cd HybridChannel
-bash install.sh
+bash tools/install.sh
 source .venv/bin/activate
-python check_installation.py --run-example
+python tools/check_installation.py --run-example
 ```
 
-`install.sh` creates `.venv` and installs the pinned dependencies. The check runs a three-position ground-plane example and generates channel data, plots, and CSV metrics. On success it prints `Example check passed:` followed by the output directory. Fresh-environment RT execution and numerical reproduction have not yet been validated.
+`tools/install.sh` creates `.venv` and installs the pinned dependencies. The check runs a three-position ground-plane example and generates channel data, plots, and CSV metrics. On success it prints `Example check passed:` followed by the output directory. Fresh-environment RT execution and numerical reproduction have not yet been validated.
 
 If installation fails, check that Python 3.12 is available. For GPU/backend errors, check `nvidia-smi` and the [Sionna RT prerequisites](https://nvlabs.github.io/sionna/rt/installation.html). For simulation errors, read `run.log` in the printed `RUN_DIR`.
 
@@ -47,7 +47,7 @@ python run_simulation.py --config Config/nyc_hybrid.json
 python run_simulation.py --config Config/nyc_consistent_rc.json
 
 # Plot one completed run
-python plot_results.py Result/<run-directory> --trusted-local-output
+python tools/plot_results.py Result/<run-directory> --trusted-local-output
 ```
 
 Replace `<run-directory>` with the directory printed by the simulation. The NYC settings use 28 GHz and a 600 km scene altitude. The scene XML and referenced meshes are included in [Scene/NYC_scene](Scene/NYC_scene).
@@ -65,9 +65,8 @@ Each run saves CIR coefficients, delays, geometry, configuration, package versio
 | [Scene/](Scene) | NYC scene XML and meshes |
 | [docs/](docs) | Model equations, flowchart, and dependency notices |
 | [run_simulation.py](run_simulation.py) | Simulation entry point |
-| [plot_results.py](plot_results.py) | PDP/CFR plots and CSV export |
-| [install.sh](install.sh), [requirements.txt](requirements.txt) | Environment setup and pinned dependencies |
-| [check_installation.py](check_installation.py) | Environment and small-example validation |
+| [tools/](tools) | Installation, environment checks, and result plotting |
+| [requirements.txt](requirements.txt) | Pinned dependencies |
 
 For the role of each channel module, see the [code guide](docs/model.md#code-guide).
 

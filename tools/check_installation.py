@@ -7,7 +7,8 @@ import subprocess
 import sys
 import tempfile
 
-REPO = Path(__file__).resolve().parent
+REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO))
 
 
 def validate_channel(path, expected_steps):
@@ -68,7 +69,7 @@ def main():
     run = runs[0]
     config = json.loads((REPO / 'Config/example.json').read_text())
     validate_channel(run / 'channel.npz', config['cli']['num-steps'])
-    subprocess.run([sys.executable, str(REPO / 'plot_results.py'), str(run),
+    subprocess.run([sys.executable, str(REPO / 'tools/plot_results.py'), str(run),
                     '--trusted-local-output'], cwd=REPO, check=True)
     for name in ('metrics.csv', 'pdp_cfr.png', 'cfr.npz'):
         if not (run / 'analysis' / name).is_file():
