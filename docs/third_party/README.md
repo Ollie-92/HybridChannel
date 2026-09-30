@@ -1,9 +1,10 @@
 # Third-party notices
 
-The simulator depends on Sionna RT 1.2.1, Mitsuba 3.7.1, Dr.Jit 1.2.0, NumPy 1.26.4, SciPy 1.16.1, and Matplotlib 3.10.5. Their license notices are retained in `licenses/`.
-
-OpenNTN is an independent research reference, not an imported dependency or vendored implementation. Its notice is retained with the Apache-2.0 text used by its inspected third-party files.
-
-OpenNTN requests citation of its WSA 2025 paper when used in research. The [project README](../../README.md#openntn) includes the requested reference and BibTeX from the [upstream citation instructions](https://github.com/ant-uni-bremen/OpenNTN#citing-openntn).
-
-No third-party library source code or binary distributions are bundled. NYC scene assets are included for private collaboration; these dependency notices do not grant rights to the scene or license the project's own code. Detailed source and license review records are preserved on the [archive/research-validation branch](https://github.com/Ollie-92/HybridChannel/tree/archive/research-validation).
+| Package | Version | License notice |
+|---|---|---|
+| Sionna RT | 1.2.1 | [Notice](licenses/Sionna-RT-1.2.1-notice.txt), [Apache 2.0](licenses/Apache-2.0.txt) |
+| Mitsuba | 3.7.1 | [License](licenses/mitsuba-LICENSE.txt) |
+| Dr.Jit | 1.2.0 | [License](licenses/drjit-LICENSE.txt) |
+| NumPy | 1.26.4 | [License](licenses/numpy-LICENSE.txt) |
+| SciPy | 1.16.1 | [License](licenses/scipy-LICENSE.txt) |
+| Matplotlib | 3.10.5 | [License](licenses/matplotlib-LICENSE.txt) |
