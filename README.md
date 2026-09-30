@@ -97,3 +97,11 @@ T. Düe, M. Vakilifard, C. Bockelmann, D. Wübben, and A. Dekorsy, “OpenNTN: A
 </details>
 
 Third-party licenses and notices are listed in [docs/third_party](docs/third_party/README.md).
+
+## Usage Notice
+
+The authors permit academic research use of the original HybridChannel code provided that this repository is cited. All other rights are reserved. Redistribution, modification, or commercial use requires prior written permission from the authors, unless separately authorized.
+
+For academic work using this implementation, cite *HybridChannel: Hybrid RT–RC Satellite Channel Simulator*, https://github.com/Ollie-92/HybridChannel, and identify the commit used.
+
+This notice applies only to original project material. Third-party software, scene assets, and reproduced figures remain subject to their respective rights and licenses.
