@@ -98,25 +98,11 @@ T. Düe, M. Vakilifard, C. Bockelmann, D. Wübben, and A. Dekorsy, “OpenNTN: A
 
 ## Publication
 
-The paper describing HybridChannel is available as an arXiv preprint:
-
-Yu-Chien Lin, Cheng-Yi Chang, Yen-Cheng Lai, Ming-Chun Lee, and Ta-Sung Lee, **An Open-Source Hybrid Ray-Tracing and 3GPP Channel Simulator for Non-Terrestrial Network**, 2026.
+**An Open-Source Hybrid Ray-Tracing and 3GPP Channel Simulator for Non-Terrestrial Network**
 
 [arXiv:2610.37536](https://arxiv.org/abs/2610.37536)
 
-Please cite this paper in research that uses HybridChannel, its simulation results, or its implementation methods.
-
-```bibtex
-@misc{lin2026hybridchannel,
-  title         = {An Open-Source Hybrid Ray-Tracing and {3GPP} Channel Simulator for Non-Terrestrial Network},
-  author        = {Yu-Chien Lin and Cheng-Yi Chang and Yen-Cheng Lai and Ming-Chun Lee and Ta-Sung Lee},
-  year          = {2026},
-  eprint        = {2610.37536},
-  archivePrefix = {arXiv},
-  primaryClass  = {eess.SY},
-  url           = {https://arxiv.org/abs/2610.37536}
-}
-```
+If you use HybridChannel, its simulation results, or its implementation methods in academic work, you must cite this paper.
 
 ## Usage Notice
 
