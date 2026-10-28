@@ -96,10 +96,32 @@ T. Düe, M. Vakilifard, C. Bockelmann, D. Wübben, and A. Dekorsy, “OpenNTN: A
 
 </details>
 
+## Publication
+
+The paper describing HybridChannel is available as an arXiv preprint:
+
+Yu-Chien Lin, Cheng-Yi Chang, Yen-Cheng Lai, Ming-Chun Lee, and Ta-Sung Lee, **An Open-Source Hybrid Ray-Tracing and 3GPP Channel Simulator for Non-Terrestrial Network**, 2026.
+
+[arXiv:2610.37536](https://arxiv.org/abs/2610.37536)
+
+Please cite this paper in research that uses HybridChannel, its simulation results, or its implementation methods.
+
+```bibtex
+@misc{lin2026hybridchannel,
+  title         = {An Open-Source Hybrid Ray-Tracing and {3GPP} Channel Simulator for Non-Terrestrial Network},
+  author        = {Yu-Chien Lin and Cheng-Yi Chang and Yen-Cheng Lai and Ming-Chun Lee and Ta-Sung Lee},
+  year          = {2026},
+  eprint        = {2610.37536},
+  archivePrefix = {arXiv},
+  primaryClass  = {eess.SY},
+  url           = {https://arxiv.org/abs/2610.37536}
+}
+```
+
 ## Usage Notice
 
-The authors permit academic research use of the original HybridChannel code provided that this repository is cited. All other rights are reserved. Redistribution, modification, or commercial use requires prior written permission from the authors, unless separately authorized.
+The authors permit academic research use of the original HybridChannel code provided that the associated paper above is correctly cited. All other rights are reserved. Redistribution, modification, or commercial use requires prior written permission from the authors, unless separately authorized.
 
-For academic work using this implementation, cite *HybridChannel: Hybrid RT–RC Satellite Channel Simulator*, https://github.com/Ollie-92/HybridChannel, and identify the commit used.
+Academic work using this implementation must cite *An Open-Source Hybrid Ray-Tracing and 3GPP Channel Simulator for Non-Terrestrial Network* ([arXiv:2610.37536](https://arxiv.org/abs/2610.37536)). Please also include the repository URL, https://github.com/Ollie-92/HybridChannel, and identify the commit used for reproducibility.
 
 This notice applies only to original project material. Third-party software, scene assets, and reproduced figures remain subject to their respective rights and licenses.
