@@ -2,9 +2,9 @@
 
 Hybrid RT–RC satellite channel simulator based on the map-based hybrid model in **3GPP TR 38.901 (v19), Clause 8**.
 
-Sionna RT computes propagation paths in a 3D scene. Statistical random clusters supplement those paths through delay generation, duplicate-cluster removal, and power anchoring. The simulator produces complex MIMO channel impulse responses along a configurable straight satellite trajectory.
+Sionna RT computes propagation paths in a 3D scene. Statistical random clusters supplement those paths through delay generation, duplicate-cluster removal, and power anchoring. The simulator produces complex MIMO channel impulse responses for configured satellite and user-terminal positions.
 
-[Quick start](#quick-start) · [Notebook simulator](#notebook-simulator) · [Experiments](#experiments) · [Model details](docs/model.md)
+[Quick start](#quick-start) · [Experiments](#experiments) · [Outputs](#outputs) · [Model details](docs/model.md)
 
 ## Channel Generation
 
@@ -12,116 +12,89 @@ Sionna RT computes propagation paths in a 3D scene. Statistical random clusters 
 
 Source: **3GPP TR 38.901 V19.1.0, Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151).
 
-The figure describes the reference procedure. This implementation provides Hybrid RT–RC generation and a fixed-scatterer RC-only option. In the original CLI implementation, full Hybrid temporal consistency and TLE propagation are not implemented; see [model details](docs/model.md) for equations and assumptions. The additional notebook supports TLE position sampling and a restricted experimental temporal mode; these do not establish full Hybrid spatial/temporal consistency or numerical equivalence to the original CLI.
+The figure describes the reference channel-generation procedure. See [model details](docs/model.md) for equations and assumptions and [implementation notes](docs/notebook_details.md) for supported features and validation limits.
 
 ## Quick Start
 
-The recorded research environment uses **Ubuntu 24.04, Python 3.12, Sionna RT 1.2.1, and an NVIDIA RTX 5080**. Install Git, Python with `venv` support, and a working NVIDIA driver first. The original CLI instructions below remain available alongside the notebook entry point.
+Open [hybrid_simulator.ipynb](hybrid_simulator.ipynb) to configure and run the simulator. The commands below target Linux/Ubuntu with Python 3.12 and a working NVIDIA driver.
 
 ```bash
-git clone https://github.com/Ollie-92/HybridChannel.git
+# While this update is in PR #2, select its branch.
+git clone --branch codex/notebook-simulator-integration https://github.com/Ollie-92/HybridChannel.git
 cd HybridChannel
-bash tools/install.sh
-source .venv/bin/activate
-python tools/check_installation.py --run-example
-```
-
-`tools/install.sh` creates `.venv` and installs the pinned dependencies. The check runs a three-position ground-plane example and generates channel data, plots, and CSV metrics. On success it prints `Example check passed:` followed by the output directory. Fresh-environment RT execution and numerical reproduction have not yet been validated.
-
-If installation fails, check that Python 3.12 is available. For GPU/backend errors, check `nvidia-smi` and the [Sionna RT prerequisites](https://nvlabs.github.io/sionna/rt/installation.html). For simulation errors, read `run.log` in the printed `RUN_DIR`.
-
-### Notebook simulator
-
-The root [hybrid_simulator.ipynb](hybrid_simulator.ipynb) is an additional interactive entry point. The original `Hybrid_channel/`, `Config/`, `Scene/`, `tools/`, and `run_simulation.py` remain in place. The new `hybrid_simulator/` package reorganizes and extends the research implementation; it is not a drop-in replacement for the original CLI or its saved results.
-
-From the repository root, in a Python 3.12 environment with a working NVIDIA driver:
-
-```bash
-python -m venv .venv-notebook
+python3.12 -m venv .venv-notebook
 source .venv-notebook/bin/activate
 python -m pip install -r requirements-notebook.txt
 python -m jupyterlab hybrid_simulator.ipynb
 ```
 
-The recorded environment uses Sionna/Sionna RT 1.2.1 and TensorFlow 2.20.0. RT API references use the Sionna RT 1.2.2 documentation with installed-version compatibility checks. The OpenNTN adapter loads the vendored TensorFlow revision `cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2`; it does not install current OpenNTN 2.x or upgrade Sionna. The notebook uses `cuda_ad_mono_polarized` for RT and TensorFlow CPU for OpenNTN. Installation on a fresh machine has not yet been verified.
+The dependency file specifies the package versions. Fresh-machine installation has not yet been verified; see [environment and validation details](docs/notebook_details.md).
 
-Run Environment and Configuration, choose **A (fixed positions)** or **B (orbit)**, then run channel generation, output inspection and plotting. Do not execute both geometry alternatives as part of an unconditional Run All. The default uses the existing `Scene/NYC_scene/NYC_sionna.xml`, one enabled satellite/UE pair, downlink, 2 GHz, and 10 million RT samples per source. The ray budget is preserved from the prepared research notebook and can take substantial time; no RT computation is required merely to read the notebook.
+Run the notebook in this order:
 
-| Mode | Channel source | Scope |
-|---|---|---|
-| `rt` | Native Sionna RT, followed by custom path filtering | Configured endpoint arrays; the configured power threshold is applied |
-| `hybrid` | RT-derived and statistical random clusters | Fixed internal 1x1 iso VH RT probe; actual endpoint arrays enter channel synthesis; KB=1 ray delays |
-| `3gpp` | Pinned native OpenNTN | Fixed topology, uplink/downlink, regular multi-element arrays; no OpenNTN orbit spatial-consistency implementation |
+1. **Environment**: import the packages and initialize the runtime.
+2. **Configuration**: set the mode, direction, frequency and endpoint antennas.
+3. Choose **A: fixed positions** or **B: orbit**. Execute only the selected geometry section.
+4. Create the channels and run the snapshot loop.
+5. Inspect the output tables and plot the selected port pair's per-ray power.
 
-Edit endpoint `num_rows`, `num_cols`, spacing, polarization and orientation in Configuration. Spacing is in wavelengths and orientation in degrees. A VH element contributes two ports. Fixed-position links are formed from enabled satellite/UE combinations; this does not establish cross-UE spatial correlation. The current notebook orbit example is for one satellite/UE pair. Optional ionosphere corrections default to off; NeQuick2-backed corrections require an external compatible library/data installation that is not bundled here. No end-to-end native bent-ray solver is claimed.
-
-#### Notebook outputs
-
-Snapshots are saved under `hybrid_simulator/results/runs/<run>/<link>/<direction>/fixed` or `orbit_XXXX`. Reusing a directory overwrites matching files.
-
-| File | Meaning |
-|---|---|
-| `channel_paths.csv` | Every RX/TX port, ray/tap and time sample; complex coefficients split into real/imaginary columns |
-| `channel_matrix.csv` | Coherent sum of paths at the carrier for every port pair/time sample |
-| `pdp.csv` | Unnormalized incoherent power sum across all ports and exactly equal delays |
-| `cfr.csv` | Complex frequency response by port, time and frequency offset |
-| `inspection_summary.csv`, `port_metrics.csv`, `source_summary.csv` | Written when Inspect outputs runs: selected-sample summary, per-port power/phase/delay statistics, source counts |
-| `channel.npz`, `summary.json`, `CSV_README.txt` | Full numerical arrays, metadata and field definitions |
-
-The notebook per-ray PDP follows the original plotting convention: select `RX_PORT`/`TX_PORT`, show individual rays versus excess delay, and normalize each panel to its strongest ray (0 dB). Defaults are snapshot 0 and time sample 0; `SNAPSHOT_INDEX=-1` selects the last snapshot. Equal-delay rays overlap without summation. The corresponding `ray_pdp_*.png` and `.csv` are saved in the link directory. This plot is distinct from `pdp.csv`; normalized panels do not compare absolute gains between port pairs. Gains are dimensionless channel gains in dB, not received power in dBm. OpenNTN outputs are aggregated native taps, not individual unresolved sub-rays.
-
-#### Validation and limitations
-
-Twelve native OpenNTN comparisons passed on the recorded server, covering single-element regression, MIMO, mixed polarization, uplink/downlink, LOS/NLOS and Doppler options. Raw CIR/delays/CFR and mapped public CIR/CFR/H matched exactly in those cases. See [validation details](hybrid_simulator/OPENNTN_MIMO.md) and the [recorded comparison table](hybrid_simulator/validation/openntn_mimo/validation.csv). Re-run with:
-
-```bash
-python -B hybrid_simulator/validate_openntn_mimo.py
-```
-
-This validates the adapter against the pinned upstream for the tested cases. It does not validate all physical models, complete paper-figure reproduction, or numerical equivalence between the new package and the preserved original CLI. [The module guide](hybrid_simulator/MODULE_GUIDE.md) describes the new files. Restart the notebook kernel after changing module code.
+The default is one satellite/UE pair, fixed positions, Hybrid downlink, 2 GHz and the included NYC scene. It uses 10 million RT samples per source, so it is not a lightweight installation test. Restart the kernel after updating Python modules.
 
 ## Experiments
 
-The following original CLI experiments remain available. Run commands from the repository root. Each JSON file contains the scene path and simulation parameters.
+Configure experiments directly in `hybrid_simulator.ipynb`:
 
-| Configuration | Scene | Channel | Positions |
-|---|---|---|---|
-| [example.json](Config/example.json) | Generated ground plane | Hybrid RT–RC | 3 |
-| [nyc_hybrid.json](Config/nyc_hybrid.json) | NYC | Hybrid RT–RC | 5 |
-| [nyc_consistent_rc.json](Config/nyc_consistent_rc.json) | NYC | Fixed-scatterer RC-only, with RT power anchoring | 5 |
+| Setting | Options |
+|---|---|
+| `mode` | `rt`, `hybrid`, or `3gpp` (OpenNTN) |
+| `directions` | `downlink`, `uplink`, or both |
+| `topology` | Fixed positions or orbit; OpenNTN currently supports fixed topology |
+| Endpoint antenna | Rows, columns, spacing, polarization and orientation |
+| Scene | Existing `Scene/NYC_scene/NYC_sionna.xml`, or a configured scene XML |
 
-```bash
-python run_simulation.py --config Config/nyc_hybrid.json
+A VH element contributes two ports. Fixed-position links are generated from enabled satellite/UE combinations; the notebook orbit example uses one satellite/UE pair. Spacing is in wavelengths, positions in meters and orientations in degrees. Optional ionosphere effects default to off and may require external model inputs.
 
-# Fixed-scatterer RC-only
-python run_simulation.py --config Config/nyc_consistent_rc.json
+The original CLI, JSON configurations and plotting commands are retained in [Original command-line workflow](docs/legacy_cli.md).
 
-# Plot one completed run
-python tools/plot_results.py Result/<run-directory> --trusted-local-output
-```
+## Outputs
 
-Replace `<run-directory>` with the directory printed by the simulation. The NYC settings use 28 GHz and a 600 km scene altitude. The scene XML and referenced meshes are included in [Scene/NYC_scene](Scene/NYC_scene).
+Results are written to `hybrid_simulator/results/runs/<run>/<link>/<direction>/fixed` or `orbit_XXXX`. The notebook prints the exact location. Reusing a directory overwrites matching output files.
 
-Edit the `cli` fields in a configuration to change frequency, antennas, receiver coordinates, trajectory, seed, or RT settings. For another scene, add `--scene /absolute/path/to/scene.xml` to the simulation command and adjust its geometry settings.
+| Output | Contents |
+|---|---|
+| `channel_paths.csv` | Complex coefficients and delays for every port pair, ray/tap and time sample |
+| `channel_matrix.csv` | Coherent channel matrix at the carrier |
+| `cfr.csv` | Complex frequency response |
+| `pdp.csv` | Unnormalized, incoherent path-power sums across all ports at equal delays |
+| `inspection_summary.csv`, `port_metrics.csv`, `source_summary.csv` | Summary, per-port metrics and source composition, generated by Inspect outputs |
+| `channel.npz`, `summary.json`, `CSV_README.txt` | Full arrays, metadata and field definitions |
 
-Each run saves CIR coefficients, delays, geometry, configuration, package versions, and logs under `Result/`. Analysis adds PDP/CFR plots and CSV metrics in `analysis/`. Only analyze trusted files: the saved channel uses NumPy object arrays.
+For the per-ray plot, select `RX_PORT`, `TX_PORT`, `SNAPSHOT_INDEX` and `TIME_SAMPLE`. Each panel is normalized to its strongest ray (0 dB), and equal-delay rays overlap. The matching `ray_pdp_*.png` and `.csv` are stored in the link directory. This plot differs from the all-port `pdp.csv`; it does not show absolute gain differences between port pairs. OpenNTN paths are aggregated native taps. Channel gains are in dB, not received power in dBm.
 
 ## Repository Structure
 
-| Path | Purpose |
-|---|---|
-| [hybrid_simulator.ipynb](hybrid_simulator.ipynb) | Additional interactive notebook entry point |
-| [hybrid_simulator/](hybrid_simulator) | New RT/Hybrid/OpenNTN package, CSV exports and pinned OpenNTN source |
-| [requirements-notebook.txt](requirements-notebook.txt) | Notebook additions to the original pinned environment |
-| [Hybrid_channel/](Hybrid_channel) | RT path extraction, random clusters, channel assembly, and trajectory simulation |
-| [Config/](Config) | Experiment settings |
-| [Scene/](Scene) | NYC scene XML and meshes |
-| [docs/](docs) | Model equations and flowchart |
-| [run_simulation.py](run_simulation.py) | Simulation entry point |
-| [tools/](tools) | Installation, environment checks, and result plotting |
-| [requirements.txt](requirements.txt) | Pinned dependencies |
+The notebook and its modules are organized as follows:
 
-For the role of each channel module, see the [code guide](docs/model.md#code-guide).
+```text
+HybridChannel/
+├── README.md
+├── hybrid_simulator.ipynb
+├── requirements-notebook.txt
+├── hybrid_simulator/
+│   ├── rt.py
+│   ├── openntn.py
+│   ├── hybrid_model.py
+│   ├── channel_generator.py
+│   ├── config.py
+│   ├── csv_export.py
+│   ├── ...
+│   └── third_party/openntn/
+└── Scene/NYC_scene/
+```
+
+`rt.py` and `openntn.py` are alongside the other modules; there is no `backends/` directory. See the [module guide](hybrid_simulator/MODULE_GUIDE.md) for each file's role.
+
+The original `Hybrid_channel/`, `Config/`, `tools/`, `run_simulation.py`, `requirements.txt` and existing `docs/` contents remain in the repository. The notebook package is not yet established as numerically equivalent to every original CLI mode. The [validation notes](docs/notebook_details.md#validation-and-limitations) record the completed OpenNTN comparisons and remaining limits.
 
 ## References
 
