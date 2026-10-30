@@ -1,4 +1,0 @@
-* text=auto eol=lf
-*.png binary
-*.npz binary
-/Scene/** -text
