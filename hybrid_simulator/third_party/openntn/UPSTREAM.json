@@ -1,0 +1,373 @@
+{
+  "repository": "https://github.com/ant-uni-bremen/OpenNTN",
+  "commit": "cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2",
+  "reason": "Pin the already validated OpenNTN revision for existing Sionna 1.2.1; do not upgrade runtime",
+  "files": [
+    {
+      "path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/LICENSE",
+      "sha256": "7a735f87c59852560f022cf0337de5ef07350d7cd6ba47996c624474e333779a",
+      "size": 1090
+    },
+    {
+      "path": "OpenNTN/__init__.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/__init__.py",
+      "sha256": "e50494f79cb8c815fb82e7226b1624b3bceab0d996a640b3d8e5599c95bbb154",
+      "size": 1145
+    },
+    {
+      "path": "OpenNTN/antenna.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/antenna.py",
+      "sha256": "0015d26c5b06b260d460cc6f21c712a6ef6eec0aea0f7ca33519f054727bffd7",
+      "size": 30639
+    },
+    {
+      "path": "OpenNTN/cdl.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/cdl.py",
+      "sha256": "7c0f1e923954f8e36d9667e973a2953ac493943f6540d3d6be20cfeddacf90f9",
+      "size": 30362
+    },
+    {
+      "path": "OpenNTN/channel_coefficients.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/channel_coefficients.py",
+      "sha256": "8a0b873b1b8b89b2e23dfd6eb4a351a8311690b05fca841e0fa543438768a167",
+      "size": 43883
+    },
+    {
+      "path": "OpenNTN/dense_urban.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/dense_urban.py",
+      "sha256": "affbc22e96224d50e6bf7b75623ee2e550c3c217856f6f715762c883b8759c81",
+      "size": 5502
+    },
+    {
+      "path": "OpenNTN/dense_urban_scenario.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/dense_urban_scenario.py",
+      "sha256": "4b951a8deceddabddeb4dd7fc614c2d4a59b6282ec1045bf37c26d7a71b4032b",
+      "size": 10321
+    },
+    {
+      "path": "OpenNTN/lsp.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/lsp.py",
+      "sha256": "5adb963a4a98101ca89886d16be1983192b4bf43ee9a369338f31b5fd8637114",
+      "size": 20285
+    },
+    {
+      "path": "OpenNTN/models/CDL-A.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/CDL-A.json",
+      "sha256": "54b3b5d911878c9af61c9c9eade3e6ebdb34b92752b3ab9165ac904b02e38e91",
+      "size": 711
+    },
+    {
+      "path": "OpenNTN/models/CDL-B.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/CDL-B.json",
+      "sha256": "09dfb241ce1c217e63acc088aed15e4f5e6860f57b51d4ee0cc6a97be3159e51",
+      "size": 806
+    },
+    {
+      "path": "OpenNTN/models/CDL-C.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/CDL-C.json",
+      "sha256": "5d516888c1d3b841ba71b22e910a95e3a145816eb3c58ac8d2eab07ad09baf8f",
+      "size": 594
+    },
+    {
+      "path": "OpenNTN/models/CDL-D.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/CDL-D.json",
+      "sha256": "fe8896d29144428f7c8e71099abb62980f37bef5d710086f52f70c68149d9b4e",
+      "size": 730
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_LOS_Ka_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_LOS_Ka_band_DL.json",
+      "sha256": "39417eb6b13cac92b28a8ff183ef0eefb4b6f9177e7424992578295b343fdc2c",
+      "size": 11902
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_LOS_Ka_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_LOS_Ka_band_UL.json",
+      "sha256": "d762d3d5b65de15fa53b654f5cb05775171180628b66edf83e36fd58ccffc919",
+      "size": 11929
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_LOS_S_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_LOS_S_band_DL.json",
+      "sha256": "ec6ed13b351a9edf9db3483decd4ee140e777a8e389b459768896370e2972949",
+      "size": 11905
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_LOS_S_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_LOS_S_band_UL.json",
+      "sha256": "57a95f836d8885227001d0cdff338df0735f77ade3145582edbbec3b21ce5a36",
+      "size": 11927
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_NLOS_Ka_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_NLOS_Ka_band_DL.json",
+      "sha256": "0580c76eadae7a0a99fc2e79a5a2a0b67a81a98baedd599d23aa00835aceca09",
+      "size": 12050
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_NLOS_Ka_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_NLOS_Ka_band_UL.json",
+      "sha256": "7ede302f34967dae050aad6940b3dba0fa73576b33f5a122016bca454c910e20",
+      "size": 12077
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_NLOS_S_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_NLOS_S_band_DL.json",
+      "sha256": "eac917ccdfbce183a8638eccb80285c128958987995474fb1898195fa084bea4",
+      "size": 12047
+    },
+    {
+      "path": "OpenNTN/models/Dense_Urban_NLOS_S_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Dense_Urban_NLOS_S_band_UL.json",
+      "sha256": "82a8390f6efa242ea14db7cb24b8533fbe6ef4b11e94efc2a511a89476b91fe0",
+      "size": 12073
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_LOS_Ka_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_LOS_Ka_band_DL.json",
+      "sha256": "ff69961d12794d6bdb7c9f2fd69ef85d64c26866c52cf020228b8022cfe18a6e",
+      "size": 11925
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_LOS_Ka_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_LOS_Ka_band_UL.json",
+      "sha256": "c5181fe3a42f14c5d501af654505e2ab316e71bad5e894f41ecdbb16cd0e653d",
+      "size": 11951
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_LOS_S_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_LOS_S_band_DL.json",
+      "sha256": "b73e5073c0c35aee08f0492718e5fe6dfab1b6e40090ec6def39a335ad38ff92",
+      "size": 11976
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_LOS_S_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_LOS_S_band_UL.json",
+      "sha256": "d98e8701b5b1a5cdd09438d296573f19ac5dd410743ec1b14adf0a5ac3296b4a",
+      "size": 12003
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_NLOS_Ka_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_NLOS_Ka_band_DL.json",
+      "sha256": "572a453274661a0f418e92d924a04f3472c4b2c64026015b6bedf8d4daabb176",
+      "size": 12067
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_NLOS_Ka_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_NLOS_Ka_band_UL.json",
+      "sha256": "d1bae60a318b4fe413cd07881b16df15938f832149c9aee111833ec298e704af",
+      "size": 12093
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_NLOS_S_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_NLOS_S_band_DL.json",
+      "sha256": "971a5edb6a361520da55bffe61de0f63ef8bb56cf60ba1e407b5241670d61972",
+      "size": 12099
+    },
+    {
+      "path": "OpenNTN/models/Sub_Urban_NLOS_S_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Sub_Urban_NLOS_S_band_UL.json",
+      "sha256": "a4cc8b07eaa821ad18ee418956cb8eb139c26730e700ee581102bfcf85c9c71f",
+      "size": 12117
+    },
+    {
+      "path": "OpenNTN/models/TDL-A.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-A.json",
+      "sha256": "72397e349593884f9b5479fad179a836aedf843f01ae7689cbaeee25a4dc2186",
+      "size": 248
+    },
+    {
+      "path": "OpenNTN/models/TDL-A30.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-A30.json",
+      "sha256": "ca0b02bc3da70dc3a80e520a876f8c49b6847b6f46392e72acb16539b47e5570",
+      "size": 739
+    },
+    {
+      "path": "OpenNTN/models/TDL-B.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-B.json",
+      "sha256": "5eeac07a9821cf7907f5030e0f55786dcc59100676803ac39c84519cca97d1ae",
+      "size": 311
+    },
+    {
+      "path": "OpenNTN/models/TDL-B100.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-B100.json",
+      "sha256": "2beb0cd6086565dca852199b891b9d840d8dfa5ad2cc7157dad25a48bd1c0d52",
+      "size": 750
+    },
+    {
+      "path": "OpenNTN/models/TDL-C.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-C.json",
+      "sha256": "cb26b604d0b2de6f738ec15ffa834fe530c9326c2b5321a280e9f1bb3ef71ea0",
+      "size": 238
+    },
+    {
+      "path": "OpenNTN/models/TDL-C300.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-C300.json",
+      "sha256": "4985dee6def0e486c6c4b33debe618d0c3565d29e9d231707a9a4f4adc0c8004",
+      "size": 712
+    },
+    {
+      "path": "OpenNTN/models/TDL-D.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/TDL-D.json",
+      "sha256": "8e488099267c68d873fc8792870890ce201cbb6dfcf150c0b17aeb8a16ec49c5",
+      "size": 293
+    },
+    {
+      "path": "OpenNTN/models/Urban_LOS_Ka_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_LOS_Ka_band_DL.json",
+      "sha256": "7ebfb910be7c6070f91ca1b45e4c38622b98a9dbf7e496de572d2aa3e10f9746",
+      "size": 11965
+    },
+    {
+      "path": "OpenNTN/models/Urban_LOS_Ka_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_LOS_Ka_band_UL.json",
+      "sha256": "d80f7056c185d5a0528ca057073ea9e8acdb8c5ebf204c966d3be959312de2f9",
+      "size": 11717
+    },
+    {
+      "path": "OpenNTN/models/Urban_LOS_S_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_LOS_S_band_DL.json",
+      "sha256": "3fb639950c6f4db77b25af42015c2191ab5d400b315b533547afdcf45be0abfb",
+      "size": 11955
+    },
+    {
+      "path": "OpenNTN/models/Urban_LOS_S_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_LOS_S_band_UL.json",
+      "sha256": "cc5738678bf7921d5313b3fc62927e2497fb36f33e1979d1a0e11290a315ad42",
+      "size": 11978
+    },
+    {
+      "path": "OpenNTN/models/Urban_NLOS_Ka_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_NLOS_Ka_band_DL.json",
+      "sha256": "03b63bf50f10842fe3a2c7ada542f00862bfe2061fa581b05545cd7292736c83",
+      "size": 12135
+    },
+    {
+      "path": "OpenNTN/models/Urban_NLOS_Ka_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_NLOS_Ka_band_UL.json",
+      "sha256": "d61902f63b0cc227c270eb5768d0c72fd9c4257d7403c94a31b6b3fb16c1ffb6",
+      "size": 12231
+    },
+    {
+      "path": "OpenNTN/models/Urban_NLOS_S_band_DL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_NLOS_S_band_DL.json",
+      "sha256": "6957614e824099cae2f0a248cd3a90462c2f83247ad3bac1f66eb337f0d7b375",
+      "size": 12165
+    },
+    {
+      "path": "OpenNTN/models/Urban_NLOS_S_band_UL.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/Urban_NLOS_S_band_UL.json",
+      "sha256": "af5c55bde67427a2ca95e6d01c75912b3490b44a73c87f638078da8f0c52c371",
+      "size": 12231
+    },
+    {
+      "path": "OpenNTN/models/__init__.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/__init__.py",
+      "sha256": "a9b071c6ef473b447cfe2197d7bba2c019f5c8ee471c247b836e23794c63a72c",
+      "size": 146
+    },
+    {
+      "path": "OpenNTN/models/bessel.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/bessel.json",
+      "sha256": "dc162075d0039659060eeb480dc6d4b5565ecef9c7dac144087d19d5db12f361",
+      "size": 1323313
+    },
+    {
+      "path": "OpenNTN/models/bessel.npy",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/bessel.npy",
+      "sha256": "aad62257c2d381d7a5c68047c4ffe976239d2d61423de9d3c13d0913965393b3",
+      "size": 160128
+    },
+    {
+      "path": "OpenNTN/models/bessel_int.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/bessel_int.json",
+      "sha256": "4787d6371c58c64572c3ea26b29576a303cced8fb589b72ebe8d27a42814e7bf",
+      "size": 1417820
+    },
+    {
+      "path": "OpenNTN/models/pseudo_model.json",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/models/pseudo_model.json",
+      "sha256": "a8960f176347de457c0cb90fbc8cf137ac98bb1c5295b096f004d8d5c6e40176",
+      "size": 2148
+    },
+    {
+      "path": "OpenNTN/rays.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/rays.py",
+      "sha256": "e9d206d8db2f2aa033932ff2747f62b9547088210680975bd45ee9be3ee53d91",
+      "size": 34051
+    },
+    {
+      "path": "OpenNTN/sub_urban.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/sub_urban.py",
+      "sha256": "575bfce6db2bf40d613c5ccce00d6e0dd56225357074b09dadda41e368d3e4d5",
+      "size": 5480
+    },
+    {
+      "path": "OpenNTN/sub_urban_scenario.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/sub_urban_scenario.py",
+      "sha256": "c0fccaade6c2e11d49afe599416d1f0ad2f821eed047bc0468a87649a2507718",
+      "size": 10367
+    },
+    {
+      "path": "OpenNTN/system_level_channel.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/system_level_channel.py",
+      "sha256": "e7951b1c6aad5802241c99758bbbce8159dc779071a399c8ecda9641cb2d70b9",
+      "size": 18191
+    },
+    {
+      "path": "OpenNTN/system_level_scenario.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/system_level_scenario.py",
+      "sha256": "4977bd7371133a2b816da2d9e64ee221011feba5526bbb8efa11fc3bc9534d70",
+      "size": 34847
+    },
+    {
+      "path": "OpenNTN/tdl.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/tdl.py",
+      "sha256": "f5578565b77500b6ab9117094294f92eb41c80418e3a106959fcb9fc42151961",
+      "size": 28385
+    },
+    {
+      "path": "OpenNTN/urban.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/urban.py",
+      "sha256": "f746506f9ecd808b5f4775cbe634cc7a3649e3e4e5cbbccb30fd7ac6d80909cf",
+      "size": 5428
+    },
+    {
+      "path": "OpenNTN/urban_scenario.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/urban_scenario.py",
+      "sha256": "544d3311456b86acd15469a982c32aadecbc3f6024fbf2176a1c243cb91e7df6",
+      "size": 10334
+    },
+    {
+      "path": "OpenNTN/utils.py",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/OpenNTN/utils.py",
+      "sha256": "c927488fa05819d62ac5d0febdc924b091874f25a263e286c735cf0bf41c888b",
+      "size": 78934
+    },
+    {
+      "path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/README.md",
+      "sha256": "912b00b7222b8b8344d405d1f7d2197a7721ef51c3bddb1e7da467b70519631f",
+      "size": 11445
+    },
+    {
+      "path": "example/channel_response.ipynb",
+      "source_url": "https://raw.githubusercontent.com/ant-uni-bremen/OpenNTN/cbb0e37079edeaf04f78d25b2c8e5b0539ad0df2/example/channel_response.ipynb",
+      "sha256": "2134beba81cf84d6666cadfaadeada57c279ab0163b4fe81e0cd7428e877b8cc",
+      "size": 620195
+    }
+  ],
+  "compatibility_patches": [
+    {
+      "path": "OpenNTN/channel_coefficients.py",
+      "reason": "Standalone OpenNTN package import in Sionna 1.2.1",
+      "patched_sha256": "4c1d74a87c5986d4cf6a20db22446660781cd5fa42329c88363d1ba6783d2012"
+    },
+    {
+      "path": "OpenNTN/system_level_scenario.py",
+      "reason": "Standalone OpenNTN package import in Sionna 1.2.1",
+      "patched_sha256": "66f2cd4b834a1f9c658d8f69e59c7fb8d43c1089f1473c96846d40a3623b7b2d"
+    }
+  ]
+}

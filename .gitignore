@@ -43,3 +43,8 @@ id_ed25519*
 # NYC scene included in the private research repository
 !/Scene/NYC_scene/NYC_sionna.xml
 !/Scene/NYC_scene/meshes/*.ply
+
+# Notebook simulator outputs and runtime caches
+/hybrid_simulator/results/
+/.venv-notebook/
+!/hybrid_simulator/third_party/openntn/OpenNTN/models/bessel.npy

@@ -1,0 +1,9 @@
+# Notebook additions to the unchanged original CLI environment.
+-r requirements.txt
+sionna==1.2.1
+tensorflow==2.20.0
+pandas==2.3.3
+skyfield==1.54
+pyproj==3.7.2
+jupyterlab==4.4.6
+nbformat==5.10.4
