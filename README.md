@@ -12,7 +12,7 @@ Sionna RT computes propagation paths in a 3D scene. Statistical random clusters 
 
 Source: **3GPP TR 38.901 V19.1.0, Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151).
 
-The figure describes the reference channel-generation procedure. See [model details](docs/model.md) for equations and assumptions and [implementation notes](docs/notebook_details.md) for supported features and validation limits.
+The figure describes the reference channel-generation procedure. See [model details](docs/model.md) for equations and assumptions.
 
 ## Quick Start
 
@@ -28,7 +28,7 @@ python -m pip install -r requirements-notebook.txt
 python -m jupyterlab hybrid_simulator.ipynb
 ```
 
-The dependency file specifies the package versions. Fresh-machine installation has not yet been verified; see [environment and validation details](docs/notebook_details.md).
+The dependency file specifies the package versions. Fresh-machine installation has not yet been verified.
 
 Run the notebook in this order:
 
@@ -54,7 +54,53 @@ Configure experiments directly in `hybrid_simulator.ipynb`:
 
 A VH element contributes two ports. Fixed-position links are generated from enabled satellite/UE combinations; the notebook orbit example uses one satellite/UE pair. Spacing is in wavelengths, positions in meters and orientations in degrees. Optional ionosphere effects default to off and may require external model inputs.
 
-The original CLI, JSON configurations and plotting commands are retained in [Original command-line workflow](docs/legacy_cli.md).
+<details>
+<summary>Original CLI instructions (retained for existing users)</summary>
+
+
+
+The recorded research environment uses **Ubuntu 24.04, Python 3.12, Sionna RT 1.2.1, and an NVIDIA RTX 5080**. Install Git, Python with `venv` support, and a working NVIDIA driver first. The original CLI instructions below remain available alongside the notebook entry point.
+
+```bash
+git clone https://github.com/Ollie-92/HybridChannel.git
+cd HybridChannel
+bash tools/install.sh
+source .venv/bin/activate
+python tools/check_installation.py --run-example
+```
+
+`tools/install.sh` creates `.venv` and installs the pinned dependencies. The check runs a three-position ground-plane example and generates channel data, plots, and CSV metrics. On success it prints `Example check passed:` followed by the output directory. Fresh-environment RT execution and numerical reproduction have not yet been validated.
+
+If installation fails, check that Python 3.12 is available. For GPU/backend errors, check `nvidia-smi` and the [Sionna RT prerequisites](https://nvlabs.github.io/sionna/rt/installation.html). For simulation errors, read `run.log` in the printed `RUN_DIR`.
+
+## Experiments
+
+
+The following original CLI experiments remain available. Run commands from the repository root. Each JSON file contains the scene path and simulation parameters.
+
+| Configuration | Scene | Channel | Positions |
+|---|---|---|---|
+| [example.json](Config/example.json) | Generated ground plane | Hybrid RT–RC | 3 |
+| [nyc_hybrid.json](Config/nyc_hybrid.json) | NYC | Hybrid RT–RC | 5 |
+| [nyc_consistent_rc.json](Config/nyc_consistent_rc.json) | NYC | Fixed-scatterer RC-only, with RT power anchoring | 5 |
+
+```bash
+python run_simulation.py --config Config/nyc_hybrid.json
+
+# Fixed-scatterer RC-only
+python run_simulation.py --config Config/nyc_consistent_rc.json
+
+# Plot one completed run
+python tools/plot_results.py Result/<run-directory> --trusted-local-output
+```
+
+Replace `<run-directory>` with the directory printed by the simulation. The NYC settings use 28 GHz and a 600 km scene altitude. The scene XML and referenced meshes are included in [Scene/NYC_scene](Scene/NYC_scene).
+
+Edit the `cli` fields in a configuration to change frequency, antennas, receiver coordinates, trajectory, seed, or RT settings. For another scene, add `--scene /absolute/path/to/scene.xml` to the simulation command and adjust its geometry settings.
+
+Each run saves CIR coefficients, delays, geometry, configuration, package versions, and logs under `Result/`. Analysis adds PDP/CFR plots and CSV metrics in `analysis/`. Only analyze trusted files: the saved channel uses NumPy object arrays.
+
+</details>
 
 ## Outputs
 
@@ -92,9 +138,9 @@ HybridChannel/
 └── Scene/NYC_scene/
 ```
 
-`rt.py` and `openntn.py` are alongside the other modules; there is no `backends/` directory. See the [module guide](hybrid_simulator/MODULE_GUIDE.md) for each file's role.
+`rt.py` and `openntn.py` are alongside the other modules; there is no `backends/` directory.
 
-The original `Hybrid_channel/`, `Config/`, `tools/`, `run_simulation.py`, `requirements.txt` and existing `docs/` contents remain in the repository. The notebook package is not yet established as numerically equivalent to every original CLI mode. The [validation notes](docs/notebook_details.md#validation-and-limitations) record the completed OpenNTN comparisons and remaining limits.
+The original `Hybrid_channel/`, `Config/`, `tools/`, `run_simulation.py`, `requirements.txt` and existing `docs/` contents remain in the repository. The notebook package is not yet established as numerically equivalent to every original CLI mode. Twelve OpenNTN adapter comparisons passed against the pinned upstream; complete paper reproduction remains unverified.
 
 ## References
 
