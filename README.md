@@ -8,11 +8,7 @@ Sionna RT computes propagation paths in a 3D scene. Statistical random clusters 
 
 ## Channel Generation
 
-![Map-based hybrid channel generation procedure](hybrid_simulator/channel_flowchart.png)
-
-Source: **3GPP TR 38.901 V19.1.0, Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151).
-
-The figure describes the reference channel-generation procedure.
+Reference procedure: **3GPP TR 38.901 V19.1.0, Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151).
 
 ## Quick Start
 
@@ -26,8 +22,6 @@ source .venv-notebook/bin/activate
 python -m pip install -r hybrid_simulator/requirements-notebook.txt
 python -m jupyterlab hybrid_simulator/hybrid_simulator.ipynb
 ```
-
-The branch above contains the update in PR #2. The dependency file specifies the package versions. Installation on a fresh machine has not yet been verified.
 
 ## Usage
 
