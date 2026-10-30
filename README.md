@@ -4,15 +4,15 @@ Hybrid RT–RC satellite channel simulator based on the map-based hybrid model i
 
 Sionna RT computes propagation paths in a 3D scene. Statistical random clusters supplement those paths through delay generation, duplicate-cluster removal, and power anchoring. The simulator produces complex MIMO channel impulse responses for configured satellite and user-terminal positions.
 
-[Quick start](#quick-start) · [Usage](#usage) · [Outputs](#outputs) · [Model details](hybrid_simulator/legacy/docs/model.md)
+[Quick start](#quick-start) · [Usage](#usage) · [Outputs](#outputs)
 
 ## Channel Generation
 
-![Map-based hybrid channel generation procedure](hybrid_simulator/legacy/docs/channel_flowchart.png)
+![Map-based hybrid channel generation procedure](hybrid_simulator/channel_flowchart.png)
 
 Source: **3GPP TR 38.901 V19.1.0, Clause 8.4, Figure 8.4-1**, “Channel coefficient generation procedure.” [ETSI PDF](https://www.etsi.org/deliver/etsi_TR/138900_138999/138901/19.01.00_60/tr_138901v190100p.pdf#page=151).
 
-The figure describes the reference channel-generation procedure. See [model details](hybrid_simulator/legacy/docs/model.md) for equations and assumptions.
+The figure describes the reference channel-generation procedure.
 
 ## Quick Start
 
@@ -58,23 +58,6 @@ The notebook prints the output directory, under `hybrid_simulator/results/runs/<
 | `ray_pdp_*.png` / `.csv` | The selected port pair's per-ray plot and the exact points used to draw it; saved in the link directory. |
 
 The inspection CSVs are created when **Inspect outputs** runs. For the per-ray plot, select `RX_PORT`, `TX_PORT`, `SNAPSHOT_INDEX` and `TIME_SAMPLE`. Each panel is normalized to its strongest ray (0 dB), and equal-delay rays overlap without summation. This differs from the combined `pdp.csv`. Power gains are in dB, not received power in dBm.
-
-<details>
-<summary>Original CLI (preserved)</summary>
-
-The original source, settings, tools and documents are retained in `hybrid_simulator/legacy/`. The NYC scene is shared from `Scene/NYC_scene/`. From the repository root, with the required environment activated:
-
-```bash
-cd hybrid_simulator/legacy
-python run_simulation.py --config Config/nyc_hybrid.json
-# Fixed-scatterer RC-only example
-python run_simulation.py --config Config/nyc_consistent_rc.json
-python tools/plot_results.py Result/<run-directory> --trusted-local-output
-```
-
-The original environment can still be created with `bash tools/install.sh` from the legacy directory. Its model documentation is [here](hybrid_simulator/legacy/docs/model.md). The notebook package has not been established as numerically equivalent to every original CLI mode.
-
-</details>
 
 ## References
 

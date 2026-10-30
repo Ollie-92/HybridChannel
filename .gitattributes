@@ -1,7 +1,0 @@
-* text=auto eol=lf
-*.png binary
-*.npz binary
-/Scene/** -text
-
-# Preserve vendored source bytes and keep upstream tables out of the default review.
-/hybrid_simulator/third_party/** -text linguist-vendored
