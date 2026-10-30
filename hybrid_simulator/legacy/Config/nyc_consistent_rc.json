@@ -1,7 +1,7 @@
 {
   "experiment_id": "nyc-consistent-rc",
   "description": "NYC fixed-scatterer RC simulation",
-  "scene": "Scene/NYC_scene/NYC_sionna.xml",
+  "scene": "../../Scene/NYC_scene/NYC_sionna.xml",
   "cli": {
     "rx-x": -244.4,
     "rx-y": -1435.2,

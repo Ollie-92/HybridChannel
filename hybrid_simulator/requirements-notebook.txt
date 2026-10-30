@@ -1,5 +1,5 @@
 # Notebook additions to the unchanged original CLI environment.
--r requirements.txt
+-r legacy/requirements.txt
 sionna==1.2.1
 tensorflow==2.20.0
 pandas==2.3.3

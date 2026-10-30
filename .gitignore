@@ -48,3 +48,7 @@ id_ed25519*
 /hybrid_simulator/results/
 /.venv-notebook/
 !/hybrid_simulator/third_party/openntn/OpenNTN/models/bessel.npy
+
+# Preserved CLI outputs and environments
+/hybrid_simulator/legacy/Result/
+/hybrid_simulator/legacy/.venv/
